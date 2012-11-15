@@ -1,0 +1,41 @@
+git clone git@github.com:samuelmk2/mySpace.git
+git pull origin master
+git push origin master
+
+一.常用命令：
+git init
+git add 
+当对工作区修改（或新增）的文件执行git add命令时，暂存区的目录树将被更新，同时工作区修改（或新增）的文件内容会被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。
+git commit
+当执行提交操作（git commit）时，暂存区的目录树会写到版本库（对象库）中，master分支会做相应的更新，即master最新指向的目录树就是提交时原暂存区的目录树。
+
+git checkout <file> 
+清除工作区file文件中不打算提交的所有修改（即恢复）。
+
+二.其他命令：
+git --help
+
+git help COMMAND 
+查看具体COMMAND的用法，如：git help diff
+
+git grep  "文件内容搜索"
+搜索工作区内的文件内容。
+
+git commit --amend --allow-empty
+--amend参数可对之前提交时的信息做修补，
+--allow-empty参数可允许空白内容提交
+
+git diff 比较工作区和提交暂存区的代码差异
+git diff HEAD 比较工作区和本地版本库（HEAD）的代码差异
+git diff --cached (or --staged) 比较提交暂存区和本地版本库的代码差异
+
+git stash
+保存工作进度（包括工作区和暂存区）
+
+git config --global color.ui true
+git着色
+
+三.重要概念：
+1.暂存区(stage 或称为 index)
+
+2.HEAD实际上是一个指向本地版本库master分支的一个"指针"
