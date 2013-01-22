@@ -8,7 +8,9 @@ using namespace std;
 //#define EXERCISE_9_12
 //#define EXERCISE_9_13
 //#define EXERCISE_9_14
-#define EXERCISE_9_26
+//#define EXERCISE_9_26
+//#define EXERCISE_9_34
+#define EXERCISE_9_35
 
 int a[10] = {1,2,3,4,5,6,7,8,9,10};
 
@@ -76,10 +78,10 @@ void exercise_9_14()
 	cout << "Input some strings(Ctrl+z to end) " << endl;
 	while (cin >> str)
 		svec.push_back(str); // 把string加入到vector中
-		
+
 	vector<string>::iterator iterFirst = svec.begin();
 	vector<string>::iterator iterLast = svec.end();
-	
+
 	while (iterFirst != iterLast)
 		cout << *(iterFirst++) << endl;
 }
@@ -92,13 +94,13 @@ void exercise_9_14()
 */
 void exercise_9_26()
 {
-	cout << "here is exercise 9.14:" << endl;
-	
+	cout << "here is exercise 9.26:" << endl;
+
 	int ia[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 55, 89 };
-	
+
 	vector<int> ivec(ia,ia + 11); // a+11,指到最后一个元素的下一位。
 	list<int> ilist(ia,ia + 11);
-	
+
 	// 删除vector中的偶数值
 	vector<int>::iterator iIter = ivec.begin();
 	while (iIter != ivec.end())
@@ -108,15 +110,15 @@ void exercise_9_26()
 		else
 			iIter++;
 	}
-	
+
 	// 重新取得新的迭代器，打印验证
 	vector<int>::iterator iIter2 = ivec.begin();
-	cout << "我们是奇数!" << endl; 
+	cout << "我们是奇数!" << endl;
 	while (iIter2 != ivec.end())
 		cout << *(iIter2++) << endl;
-		
-	/////////////////////////////////////////////////////////////////////////////////	
-		
+
+	/////////////////////////////////////////////////////////////////////////////////
+
 	// 删除list中的奇数值
 	list<int>::iterator iIter3 = ilist.begin();
 	while (iIter3 != ilist.end())
@@ -126,12 +128,60 @@ void exercise_9_26()
 		else
 			iIter3++;
 	}
-	
+
 	// 重新取得新的迭代器，打印验证
 	list<int>::iterator iIter4 = ilist.begin();
-	cout << "而我们是偶数!" << endl; 
+	cout << "而我们是偶数!" << endl;
 	while (iIter4 != ilist.end())
 		cout << *(iIter4++) << endl;
+}
+
+/* Exercise 9.34
+** 使用迭代器将string对象中的字符都改为大写字母
+*/
+void exercise_9_34()
+{
+	cout << "here is exercise 9.34:" << endl;
+	
+	string s("Hello,world!");
+	
+	cout << "the origin string is :" << s << endl;
+	
+	string::iterator sIter = s.begin();
+	
+	while (sIter != s.end())
+	{
+		if (*sIter >= 'a' && *sIter <= 'z') 
+			*sIter -= 'a' - 'A'; // 'a' - 'A'的值用来表示同一个字母的大小写ascII码的数值之差，不能用26!
+			// // 土，有个函数叫 toupper() ... 见 ctype.h
+		sIter++;
+	}
+
+	cout << "after upper translater, the string is :" << s << endl;
+}
+
+/* Exercise 9.35
+** 使用迭代器寻找和删除string对象中所有的大写字母。
+*/
+void exercise_9_35()
+{
+	cout << "here is exercise 9.35:" << endl;
+	
+	string s("Hello,The Beautiful World In My Heart!");
+	
+	cout << "the origin string is :" << s << endl;
+	
+	string::iterator sIter = s.begin();
+	
+	while (sIter != s.end())
+	{
+		if (*sIter >= 'A' && *sIter <= 'Z')  // 土，有个函数叫 isupper() ....
+			s.erase(sIter); // 疑问：sIter在erase函数之后自动自增，指向下一字符？
+		else
+			sIter++;
+	}
+
+	cout << "after deleting the upper character, the string now is :" << s << endl;
 }
 
 int main()
@@ -163,10 +213,15 @@ int main()
 
 	#elif defined EXERCISE_9_14
 		exercise_9_14();
-		
+
 	#elif defined EXERCISE_9_26
 		exercise_9_26();
 		
+	#elif defined EXERCISE_9_34
+		exercise_9_34();
+		
+	#elif defined EXERCISE_9_35
+		exercise_9_35();		
 	#else
 	#endif
 
