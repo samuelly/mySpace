@@ -74,6 +74,8 @@ git stash
 git config --global color.ui true
 git着色
 
+git mv -f [new file name] [old file name]
+
 三.重要概念：
 1.暂存区(stage 或称为 index)
 
