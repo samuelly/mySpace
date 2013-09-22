@@ -7,7 +7,7 @@ using namespace std;
 //#define HP_QUESTION_2
 //#define HP_QUESTION_3
 //#define HAMAN_QUESTION_1
-#define HAMAN_QUESTION_2
+//#define HAMAN_QUESTION_2
 
 #if defined HP_QUESTION_1
 char a[] = "123456";
@@ -110,11 +110,11 @@ void Haman_question_2(void)
 {
 	B b;
 	A *a = &b;
-	
+
 	// this code cout : 1. I'm A
 	//                  2. I'm B
-	a->doSth();   
-	
+	a->doSth();
+
 	b.doMyself();
 }
 #endif
@@ -122,6 +122,18 @@ void Haman_question_2(void)
 #if defined EXERCISE_6
 
 #endif
+
+void temp()
+{
+    // string expand
+    /*
+    string str = "hello";
+
+    cout << "the str is " << str << endl;
+    str += "/////";
+    cout << "the str is " << str << endl;
+    */
+}
 
 int main(void)
 {
@@ -135,6 +147,8 @@ int main(void)
 		Haman_question_1();
 	#elif defined HAMAN_QUESTION_2
 		Haman_question_2();
+    #else
+        temp();
 	#endif
 
 

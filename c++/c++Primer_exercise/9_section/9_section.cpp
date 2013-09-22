@@ -8,9 +8,9 @@ using namespace std;
 //#define EXERCISE_9_12
 //#define EXERCISE_9_13
 //#define EXERCISE_9_14
-//#define EXERCISE_9_26
+#define EXERCISE_9_26
 //#define EXERCISE_9_34
-#define EXERCISE_9_35
+//#define EXERCISE_9_35
 
 int a[10] = {1,2,3,4,5,6,7,8,9,10};
 
@@ -142,16 +142,16 @@ void exercise_9_26()
 void exercise_9_34()
 {
 	cout << "here is exercise 9.34:" << endl;
-	
+
 	string s("Hello,world!");
-	
+
 	cout << "the origin string is :" << s << endl;
-	
+
 	string::iterator sIter = s.begin();
-	
+
 	while (sIter != s.end())
 	{
-		if (*sIter >= 'a' && *sIter <= 'z') 
+		if (*sIter >= 'a' && *sIter <= 'z')
 			*sIter -= 'a' - 'A'; // 'a' - 'A'的值用来表示同一个字母的大小写ascII码的数值之差，不能用26!
 			// // 土，有个函数叫 toupper() ... 见 ctype.h
 		sIter++;
@@ -166,13 +166,13 @@ void exercise_9_34()
 void exercise_9_35()
 {
 	cout << "here is exercise 9.35:" << endl;
-	
+
 	string s("Hello,The Beautiful World In My Heart!");
-	
+
 	cout << "the origin string is :" << s << endl;
-	
+
 	string::iterator sIter = s.begin();
-	
+
 	while (sIter != s.end())
 	{
 		if (*sIter >= 'A' && *sIter <= 'Z')  // 土，有个函数叫 isupper() ....
@@ -216,12 +216,12 @@ int main()
 
 	#elif defined EXERCISE_9_26
 		exercise_9_26();
-		
+
 	#elif defined EXERCISE_9_34
 		exercise_9_34();
-		
+
 	#elif defined EXERCISE_9_35
-		exercise_9_35();		
+		exercise_9_35();
 	#else
 	#endif
 
