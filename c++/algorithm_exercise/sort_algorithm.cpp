@@ -12,12 +12,18 @@ typedef struct {
 	int length;
 }sqList;
 
-sqList mSqList; //definition
+sqList mSqList; //definition data list
 
 typedef enum {
 	bubble_sort = 0,
+	bubble_sort_advanced,
+	simple_selection_Sort,
+	insert_ort,
+	shell_sort,
 	merge_sort
 }sortType;
+
+sortType msortType = insert_ort; // choose a kind of sort
 
 /*initialize the  data of mSqList*/
 void getData(int *a, sqList &msq)
@@ -55,6 +61,7 @@ void swap(sqList &msq,int i,int j)
 /* bubble sort */
 void bubbleSort(sqList &msq)
 {
+	cout << "***************** I'm bubule sort !! *************************" << endl;
 	for (int i = 1; i < msq.length; i++)
 	{
 		for (int j = msq.length - 1; j >= i; j-- ) // mention:it begins from the bottom of the list,from bottom to the top.
@@ -69,11 +76,12 @@ void bubbleSort(sqList &msq)
 /* this is a optimized bubble sort, through add a 'guard' to avoid useless steps if the list has already been sorted */
 void bubbleSortAdvanced(sqList &msq)
 {
+	cout << "***************** I'm bubule advanced sort !! *************************" << endl;
 	bool status = true; // definition the 'guard' 
 	for (int i = 1; i < msq.length && status; i++) // judge if the list need another sort steps
 	{
 		status = false; // initialize it as false
-		for (int j = msq.length - 1; j >= i; j-- ) 
+		for (int j = msq.length - 1; j >= i; j--) 
 		{
 			if (msq.r[j-1] > msq.r[j])
 				swap(msq,j-1,j); 
@@ -85,7 +93,8 @@ void bubbleSortAdvanced(sqList &msq)
 /* simple selection sort */
 void simpleSelectionSort(sqList &msq)
 {
-	for (int i = 0; i < msq.length - 1; i++)
+	cout << "***************** I'm siimple selection sort !! *************************" << endl;
+	for (int i = 0; i < msq.length - 1; i++) // begin with the first of the array
 	{
 		int min = i;  // set the first array as min 
 		for (int j = i + 1; j < msq.length; j++)  // loop the rest array value
@@ -99,6 +108,26 @@ void simpleSelectionSort(sqList &msq)
 	}
 }
 
+/* straight insertion sort */
+void insertSort(sqList &msq)
+{
+	cout << "***************** I'm straight insert sort !! *************************" << endl;
+	int guard = 0;  // 'guard' to store the temp smaller value
+	int i,j;
+	for (i = 1; i < msq.length; i++)  // begin with the second array element
+	{	
+		if (msq.r[i] < msq.r[i-1]) // compare with the near front array element
+		{
+			guard = msq.r[i]; // store the smaller element into 'guard'
+			for (j = i - 1; msq.r[j] > guard && (j >= 0); j--)  
+			{
+				msq.r[j+1] = msq.r[j];  // move to the back potion one by one 
+			} 
+			msq.r[j+1] = guard;  // insert the smaller value into it's current posion in this list
+		}
+	}
+}
+
 int main()
 {
 	// initialize
@@ -108,10 +137,25 @@ int main()
 	for (int i = 0; i < mSqList.length; i++)
 		cout << "mSqList.r[" << i << "] = " << mSqList.r[i] << endl;
 
-	//bubbleSort(mSqList);
-	//bubbleSortAdvanced(mSqList);
-	simpleSelectionSort(mSqList);
-	
+	switch (msortType)
+	{
+		case bubble_sort:
+			bubbleSort(mSqList);
+			break;
+		case bubble_sort_advanced:
+			bubbleSortAdvanced(mSqList);
+			break;
+		case simple_selection_Sort:
+			simpleSelectionSort(mSqList);
+			break;
+		case insert_ort:
+			insertSort(mSqList);
+			break;
+
+		default:
+			break;
+	}
+
 	cout << "after sort ,the result is :" << endl;
 	for (int i = 0; i < mSqList.length; i++)
 		cout << "mSqList.r[" << i << "] = " << mSqList.r[i] << endl;
