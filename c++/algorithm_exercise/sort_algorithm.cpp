@@ -23,7 +23,7 @@ typedef enum {
 	merge_sort
 }sortType;
 
-sortType msortType = insert_ort; // choose a kind of sort
+sortType msortType = shell_sort; // choose a kind of sort
 
 /*initialize the  data of mSqList*/
 void getData(int *a, sqList &msq)
@@ -77,7 +77,7 @@ void bubbleSort(sqList &msq)
 void bubbleSortAdvanced(sqList &msq)
 {
 	cout << "***************** I'm bubule advanced sort !! *************************" << endl;
-	bool status = true; // definition the 'guard' 
+	bool status = true; // definition of the 'guard' 
 	for (int i = 1; i < msq.length && status; i++) // judge if the list need another sort steps
 	{
 		status = false; // initialize it as false
@@ -108,7 +108,7 @@ void simpleSelectionSort(sqList &msq)
 	}
 }
 
-/* straight insertion sort */
+/* straight insertion sort -- image you are playing poker */
 void insertSort(sqList &msq)
 {
 	cout << "***************** I'm straight insert sort !! *************************" << endl;
@@ -124,6 +124,27 @@ void insertSort(sqList &msq)
 				msq.r[j+1] = msq.r[j];  // move to the back potion one by one 
 			} 
 			msq.r[j+1] = guard;  // insert the smaller value into it's current posion in this list
+		}
+	}
+}
+
+
+/* Shell sort  */
+void shellSort(sqList &msq)
+{
+	cout << "***************** I'm shell sort !! *************************" << endl;
+	int gap ; //gap is the key point,it means in every time of sort,don't compare two nearby data,instead of comparing two data with a gap. 
+	int i = 0;
+
+	for (gap = msq.length / 2; gap >= 1; gap /= 2) // after a circle of sort ,the gap is /2 ,at last ,it will become 1 and actually it's the straight insertion sort.
+	{
+		for (i = gap; i < msq.length; i++)
+		{
+			int j = 0;
+			int key = msq.r[i];
+			for (j = i - gap; j >= 0 && msq.r[j] > key; j -= gap) // all of this like the straight insertion except this: j -= gap
+				msq.r[j + gap] = msq.r[j];
+			msq.r[j + gap] = key;
 		}
 	}
 }
@@ -151,7 +172,9 @@ int main()
 		case insert_ort:
 			insertSort(mSqList);
 			break;
-
+		case shell_sort:
+			shellSort(mSqList);
+			break;
 		default:
 			break;
 	}
