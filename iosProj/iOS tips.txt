@@ -1,1 +1,212 @@
-to be continued...
+
+xcode operation tip:
+1.control+command+up :在.h和.m文件之间切换
+
+2.注意：使用格式化的注释 // TODO：可以帮助Xcode找到需要以后完成的代码。你还可以使用 Show Document Items(Control-6)来查看TODO项。 
+
+3.使用#pragma mark来组织代码
+
+4.有时候我们的程序不知道跑到哪个地方就 crash 了，而 crash 又很难重现。保守的做法是在系统抛出异常之前设置断点，具体来说是在 objc_exception_throw处设置断点。
+设置步骤为：首先在 XCode 按 CMD + 6，进入断点管理窗口；然后点击左下方的 +，增加新的 Symbolic Breakpoint，在 Symbol 一栏输入：objc_exception_throw，然后点击 done，完成。 
+这样在 Debug 模式下，如果程序即将抛出异常，就能在抛出异常处中断了。
+
+5.ios模拟器的路径－打开沙盒路径
+这种方法更方便，在Finder上点->前往->前往文件夹，输入/Users/username/Library/Application Support/iPhone Simulator/  前往。
+username这里写你的用户名。
+
+
+
+
+
+ios tips:
+
+1.property vs instance variable
+
+Setter methods can have additional side-effects. They may trigger KVC notifications, or perform further tasks if you write your own custom methods.
+You should always access the instance variables directly from within an initialization method because at the time a property is set, the rest of the object may not yet be completely initialized. Even if you don’t provide custom accessor methods or know of any side effects from within your own class, a future subclass may very well override the behavior.
+
+LLVM编译器自动综合所有属性，因此不再需要为属性写明@synthesize语句。当一个属性被综合时，就会创建accessors，允许你设置或者获得属性的值。尽管你可能不会看到它们，因为它们是在构建时创建的，但是一对getter/setter可以显示为：
+- (BOOL)finished 
+{  
+    return _finished; 
+} 
+ 
+- (void)setFinished:(BOOL)aValue 
+{  
+    _finished = aValue; 
+} 
+也就是说，llvm之后，不用自己声明_实例变量了，系统自动合成。
+
+
+
+2. problems like strong reference cycles, which lead to memory leaks.
+
+
+3.使用Block的好处有：
+Block可以用在许多不同的环境中，这样可以让代码更加简单，以及减少函数声明的数量，不用实现代理协议。
+简单性：使用 Block 我们可以不写任何附加的代码就可以访问对象，对象在数组中的索引，stop 变量。 这意味着少量的代码，减少了发生编码错误的机会(当然，并非我们一定会出现编码错误)。
+速度：使用 Block 在执行速度上要比使用快速枚举快。 在我们这个例子中，这点微小的速度提升不值得一提，但是在更复杂的情况下，这个优势就越来越重要。
+更简单的代码：使用 Block， 我们不再需要单独定义一个回调方法，保持代码在一起。使用 Block, 我们不再需要在一个地方开启动画，然后再另外一个地方处理回调。 所有和我们动画相关的代码都在一处，这样让他的可读性和维护性更强。
+适用作工作单元，通常用来做并发任务、遍历、排序、以及回调。 
+
+4.从iOS 5开始，UIViewController中引入了viewWillLayoutSubviews来调整布局。其中几个方法的调用顺序依次是：
+viewDidLoad->viewWillAppear->viewWillLayoutSubviews->viewDidAppear
+
+5,您可能之前没有见过的@import指令，它在Xcode5中被引入，是由苹果公司看作是一个现代的，更高效的替代 #import。
+有一个非常好的教程，涵盖了最新的Objective-C特性-[What’s New in Objective-C and Foundation in iOS 7](http://www.raywenderlich.com/49850/whats-new-in-objective-c-and-foundation-in-ios-7)。 
+
+
+6.在Objective-c中，当一个类需要引用另一个类，即建立复合关系的时候，需要在类的头文件中建立被引用类的指针。 如：
+Car.h
+
+#import
+@interface Car:NSObject
+{
+Tire *tires[4];
+Engine *engine;
+}
+…
+实现类我们先省略，如果你直接这么编译，编译器会报错，告诉你它不知道Tire和Engine是什么。
+
+这时候有两个选择，一个是import这两个被引用类的头文件，另一个是使用@class声明Tire和Engine是类名。 二者的区别在于：
+
+import会包含这个类的所有信息，包括实体变量和方法，而@class只是告诉编译器，其后面声明的名称是类的名称，至于这些类是如何定义的，暂时不用考虑，后面会再告诉你。
+在头文件中， 一般只需要知道被引用的类的名称就可以了。 不需要知道其内部的实体变量和方法，所以在头文件中一般使用@class来声明这个名称是类的名称。 而在实现类里面，因为会用到这个引用类的内部的实体变量和方法，所以需要使用#import来包含这个被引用类的头文件。
+在编译效率方面考虑，如果你有100个头文件都#import了同一个头文件，或者这些文件是依次引用的，如A–>B, B–>C, C–>D这样的引用关系。当最开始的那个头文件有变化的话，后面所有引用它的类都需要重新编译，如果你的类有很多的话，这将耗费大量的时间。而是用 @class则不会。
+如果有循环依赖关系，如:A–>B, B–>A这样的相互依赖关系，如果使用#import来相互包含，那么就会出现编译错误，如果使用@class在两个类的头文件中相互声明，则不会有编译错误出现。
+所以，一般来说，@class是放在interface中的，只是为了在interface中引用这个类，把这个类作为一个类型来用的。 在实现这个接口的实现类中，如果需要引用这个类的实体变量或者方法之类的，还是需要import在@class中声明的类进来.
+
+如：
+a.h
+
+@class Rectangle;
+@interface A : NSObject {
+…
+}
+a.m
+
+#import Rectangle
+@implementation A
+…
+
+7.
+有时候我们的程序不知道跑到哪个地方就 crash 了，而 crash 又很难重现。保守的做法是在系统抛出异常之前设置断点，具体来说是在 objc_exception_throw处设置断点。
+设置步骤为：首先在 XCode 按 CMD + 6，进入断点管理窗口；然后点击左下方的 +，增加新的 Symbolic Breakpoint，在 Symbol 一栏输入：objc_exception_throw，然后点击 done，完成。 
+这样在 Debug 模式下，如果程序即将抛出异常，就能在抛出异常处中断了。
+
+8.ios设备唯一标识获取策略
+http://blog.csdn.net/iitvip/article/details/10064167
+从iOS7及更高版本往后，如果你向ios设备请求获取mac地址，系统将返回一个固定值“02:00:00:00:00:00”，如果你需要识别设备的 唯一性，请使用UIDevice的identifierForVendor属性。（因广告目的而需要识别设备的应用，请考虑使用 ASIdentifierManager的advertisingIdentifier属性作为替代）
+
+9.block
+闭包就是能够读取其它函数内部变量的函数。
+http://www.cnblogs.com/ymonke/p/3511304.html
+http://www.dahuangphone.com/dv_rss.asp?s=xhtml&boardid=8&id=85&page=3
+
+
+10.ios模拟器的路径－打开沙盒路径
+这种方法更方便，在Finder上点->前往->前往文件夹，输入/Users/username/Library/Application Support/iPhone Simulator/  前往。
+username这里写你的用户名。
+
+
+11.
+[NSString stringWithFormat:@"%d",indexPath.row]
+
+12. learn：
+1. 忘掉界面编辑器
+2. 弄清楚AppDelegate是怎么成为app入口的，怎么通过self.window.rootViewController赋值启动第一个主窗口
+3. 弄清楚UIView的控件堆砌/去除方法addChild和removeFromParent之类，稍微了解一下View和Controller的关系
+4. 弄清楚UIView控制外观位置大小的一般盒模型frame/bounds/anchorPoint/position，注意有些属性在uiview.layer里，虽然我多半都在用frame。以及放缩旋转必须用transform，没现成的属性可以用。
+5. 一般的非容器具体控件具体属性自己看文档，只是建议留神一下UIButton的title和image都要用set方法，没有直接的=方法可以用来赋值，就是为了在不同状态下设置不同的东西，以及控制Button上面的image大小写法特别扭曲（要设置inset值），很多时候不如直接addChild一个UIImageView
+6. 容器控件UIScrollerVie和UITableView要了解设置代理，填充数据，响应滚动事件的写法。UITableView的古怪之处是要给它一个类让他可以用那个类新建单行控件。
+7. 弄清楚UINavigationController的Push/Pop怎么用，怎么手写代码向Navigation上增加按钮，UiTabbarController作为界面容器其实也差不多但现在用的不多了。
+8. 现在可以学一下UIView animateWithDuration方法的妙处了，各种华丽精美的，特别苹果范儿的小动画都要靠这玩意实现。
+最后. 不知道swift教程讲不讲arc，不如学一下，了解一下这个体系内部的内存管理模式挺好的，delegate用多了迟早会用得到的weak指针的。
+
+13. 图片拉伸
+-(void) setImagesforStatesNormal:(NSString*) normalImg highlighted:(NSString*) highlightedImg disabled:(NSString*)disabledImg{
+    
+    CGPoint  pt = CGPointMake(4, 4);
+    if (normalImg) {
+        UIImage* imgn = [[UIImage imageNamed:normalImg] resizableImageWithCapInsets:UIEdgeInsetsMake(pt.x,pt.y,pt.x,pt.y)];
+        [self setBackgroundImage:imgn forState:UIControlStateNormal];
+    }
+    if (highlightedImg) {
+        UIImage* imgh = [[UIImage imageNamed:highlightedImg] resizableImageWithCapInsets:UIEdgeInsetsMake(pt.x,pt.y,pt.x,pt.y)];
+        [self setBackgroundImage:imgh forState:UIControlStateHighlighted];
+    }
+    if (disabledImg) {
+        UIImage* imgd = [[UIImage imageNamed:disabledImg] resizableImageWithCapInsets:UIEdgeInsetsMake(pt.x,pt.y,pt.x,pt.y)];
+        [self setBackgroundImage:imgd forState:UIControlStateDisabled];
+    }
+}
+
+or:
+ [self setBackground:[[UIImage imageNamed:normalImg] resizableImageWithCapInsets:UIEdgeInsetsMake(7,7,7,7)]];
+
+
+14.先执行init、然后执行viewDidLoad，然后是viewWillAppear最后是viewDidAppear
+
+
+15.动画：
+    [UIView animateWithDuration:0.25 animations:^{
+        //do something
+    }];
+    
+    //延迟0.5秒再显示动画
+    [UIView animateWithDuration:0.25 delay:0.5 options:0 animations:^{
+        //do something
+    } completion:nil];
+属于block动画，参考：http://my.oschina.net/aofe/blog/270412
+
+
+16. UITableView 相关
+(1) cell点击后跳到另外的视图中然后再回来，去掉cell的点击状态
+tabview 提供了取消选中的方法
+tableview: didselectRowAtIndexPath: 这个是你用来跳转的实现代理
+在这个方法里面，最后添加一句，
+tableview deselectRowAtIndexPath:indexPath animated:YES
+
+(2) 设置cell背景颜色，兼容ios6
+cell.contentView.backgroundColor 
+
+(3) cell无法点击
+cell.userInteractionEnabled = FALSE;
+
+
+17. ios7
+#ifndef IOS7
+    #define IOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0
+#endif
+
+18. 单例
++ (instancetype)sharedInstance
+{
+    static dispatch_once_t once;
+    static id sharedInstance;
+    dispatch_once(&once, ^{
+        sharedInstance = [[self alloc] init];
+    });
+    return sharedInstance;
+}
+
+19.view navigationController stack:
+ if([self.navigationController.topViewController isKindOfClass:[IHLoginViewController class]])
+
+
+20.判断设备是ipad
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) // 同理，UIUserInterfaceIdiomPhone 即是判断是否是 iPhone
+
+
+21.从字符串中获得其中的数字
+    NSString *str= @"bla bla bla #123 bla bla 789";
+    NSMutableString *newStr = [[NSMutableString alloc] init];;
+    int j = [str length];
+    for (int i=0; i<j; i++) {       
+        if ([str characterAtIndex:i] >=48 && [str characterAtIndex:i] <=59) {
+            [newStr appendFormat:@"%c",[str characterAtIndex:i]];
+        }               
+    }
+
+    NSLog(@"%@  as int:%i", newStr, [newStr intValue]);
+
