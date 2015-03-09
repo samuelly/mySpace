@@ -210,3 +210,37 @@ cell.userInteractionEnabled = FALSE;
 
     NSLog(@"%@  as int:%i", newStr, [newStr intValue]);
 
+
+22. 根据字符串长度计算label的frame高度。
+use the NSString method sizeWithFont:constrainedToSize:lineBreakMode: to calculate the frame height needed to fit a string, then sets the origin and width.
+Resize the frame for the label using the text you want to insert. That way you can accommodate any number of lines.
+
+CGSize maximumSize = CGSizeMake(300, 9999);
+NSString *dateString = @"The date today is January 1st, 1999";
+UIFont *dateFont = [UIFont fontWithName:@"Helvetica" size:14];
+CGSize dateStringSize = [dateString sizeWithFont:dateFont 
+        constrainedToSize:maximumSize 
+        lineBreakMode:self.dateLabel.lineBreakMode];
+
+CGRect dateFrame = CGRectMake(10, 10, 300, dateStringSize.height);
+self.dateLabel.frame = dateFrame;
+
+
+23. sizeToFit
+http://stackoverflow.com/questions/1054558/vertically-align-text-within-a-uilabel/1054681#1054681
+
+
+
+
+
+
+Google mirror:
+第一个: http://www.gfsoso.com/
+
+第二个：https://google.global.ssl.fastly.net/
+
+第三个：http://www.glgoo.com/
+
+第四个：http://64.233.183.163/
+
+第五个：http://201.86.233.217/
