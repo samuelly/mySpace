@@ -244,3 +244,23 @@ Google mirror:
 第四个：http://64.233.183.163/
 
 第五个：http://201.86.233.217/
+
+
+
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+level up
+http://www.cocoachina.com/ios/20150120/10946.html
+http://www.cocoachina.com/programmer/20150123/11009.html   独立开发者
+http://www.cocoachina.com/ios/20150111/10894.html   学习资料整理
+http://www.zhihu.com/question/22914651    github上值得关注学习的iOS项目
+http://www.zhihu.com/question/20016551    系统学习iOS   19楼回答
+
+objc中国
+http://objccn.io   
+
+https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010853    auto layout
+
+
+http://objccn.io/issue-12-1/   动画解释
+https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html    core animation
