@@ -14,6 +14,33 @@ xcode operation tip:
 这种方法更方便，在Finder上点->前往->前往文件夹，输入/Users/username/Library/Application Support/iPhone Simulator/  前往。
 username这里写你的用户名。
 
+6.设置显示隐藏文件方法：
+在终端输入命令：defaults write com.apple.finder AppleShowAllFiles -bool true然后重启下finder。 
+
+
+7. svn lock 时命令行解决办法：
+$ cd /my/repository(根目录)/.svn
+$ mv wc.db wc.db.old
+$ sqlite3 wc.db.old
+sqlite> .backup main wc.db
+sqlite> .exit
+
+之后在根目录下执行svn cleanup
+
+
+
+
+
+objective c learning & improvment
+1. category原理：
+对象的方法定义都保存在类的可变区域中。Objective-C 2.0并未在头文件中将实现暴露出来，但在Objective-C 1.0中，我们可以看到方法的定义列表是一个名为 methodLists的指针的指针。
+通过修改该指针指向的指针的值，就可以实现动态地为某一个类增加成员方法。这也是Category实现的原理。同时也说明了为什么Category只可为对象增加成员方法，却不能增加成员变量。
+
+2. 
+
+
+
+
 
 
 
@@ -230,7 +257,64 @@ self.dateLabel.frame = dateFrame;
 http://stackoverflow.com/questions/1054558/vertically-align-text-within-a-uilabel/1054681#1054681
 
 
+24. 方法flashScrollIndicators：这个很有用，闪一下滚动条，暗示是否有可滚动的内容。可以在ViewDidAppear或[table reload]之后调用。
 
+
+25. 点击Cell中的按钮时，如何取所在的Cell：
+
+-(void)OnTouchBtnInCell:(UIButton *)btn 
+{ 
+CGPoint point = btn.center; 
+point = [table convertPoint:point fromView:btn.superview]; 
+NSIndexPath* indexpath = [table indexPathForRowAtPoint:point]; 
+UITableViewCell *cell = [table cellForRowAtIndexPath:indexpath]; 
+... 
+//也可以通过一路取btn的父窗口取到cell，但如果cell下通过好几层subview才到btn,就要取好几次 superview,所以我用上面的方法，比较通用。这种方法也适用于其它控件。 
+} 
+
+
+26.
+//将图片保存到本地
++ (void)SaveImageToLocal:(UIImage*)image Keys:(NSString*)key {
+    NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
+    //[preferences persistentDomainForName:LocalPath];
+    [preferences setObject:UIImagePNGRepresentation(image) forKey:key];
+}
+ 
+//本地是否有相关图片
++ (BOOL)LocalHaveImage:(NSString*)key {
+    NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
+    //[preferences persistentDomainForName:LocalPath];
+    NSData* imageData = [preferences objectForKey:key];
+    if (imageData) {
+        return YES;
+    }
+    return NO;
+}
+ 
+//从本地获取图片
++ (UIImage*)GetImageFromLocal:(NSString*)key {
+    NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
+    //[preferences persistentDomainForName:LocalPath];
+    NSData* imageData = [preferences objectForKey:key];
+    UIImage* image;
+    if (imageData) {
+        image = [UIImage imageWithData:imageData];
+    }
+    else {
+        NSLog(@"未从本地获得图片");
+    }
+    return image;
+}
+
+
+
+
+
+
+
+Jenkins：
+http://jenkins-ci.org/content/thank-you-downloading-os-x-installer
 
 
 
@@ -261,6 +345,43 @@ http://objccn.io
 
 https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010853    auto layout
 
-
 http://objccn.io/issue-12-1/   动画解释
 https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html    core animation
+
+
+
+一些pdf地址：
+https://maniacdev.com/cheatsheetobjccd.pdf    oc关键字 cheat sheet
+
+
+github 优秀库：
+https://github.com/ReactiveCocoa/ReactiveCocoa
+https://github.com/MengTo/Spring    spring动画
+
+
+
+about design：
+http://www.ui.cn/project.php?id=26753
+http://cubic-bezier.com/#.09,-0.28,.83,.84
+
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝   4/17
+http://www.zhihu.com/question/22914651
+http://www.cocoachina.com/ios/20150320/11384.html
+https://developer.worldweatheronline.com
+https://developer.apple.com/library/ios/recipes/xcode_help-IB_storyboard/chapters/AboutStoryboards.html#//apple_ref/doc/uid/TP40014225-CH41-SW1
+http://www.cnblogs.com/panyuan520/archive/2013/03/21/2973632.html
+http://programmers.stackexchange.com
+http://kb.cnblogs.com/list/1019/
+http://kb.cnblogs.com/page/501239/    堆栈
+http://kb.cnblogs.com/page/177108/    闭包
+
+
+http://www.objc.io/issue-7/communication-patterns.html 
+http://iosapp.me/blog/2014/06/09/jenkins/
+http://blog.devtang.com/blog/2014/03/21/ios-weekly-4/
+
+http://wufawei.com/2014/03/symbolicating-ios-crash-logs/
+
+http://blog.csdn.net/yiyaaixuexi/article/details/8970734     多茜博客
+http://blog.csdn.net/logcabin/article/details/8980366#comments
