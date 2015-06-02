@@ -308,6 +308,8 @@ UITableViewCell *cell = [table cellForRowAtIndexPath:indexpath];
 }
 
 
+27. 使用[[UIApplication sharedApplication] openURL:]加载其它应用
+http://blog.csdn.net/jslsblog/article/details/9931381
 
 
 
@@ -358,14 +360,43 @@ github 优秀库：
 https://github.com/ReactiveCocoa/ReactiveCocoa
 https://github.com/MengTo/Spring    spring动画
 
+http://github.ibireme.com/github/list/ios/      github－ios 备忘录
+
 
 
 about design：
 http://www.ui.cn/project.php?id=26753
 http://cubic-bezier.com/#.09,-0.28,.83,.84
+https://unsplash.com      设计网站
+http://www.hellorf.com    设计网站－low
+
+
+
+工具相关：
+sketch：
+https://twitter.com/MengTo/favorites  需翻墙
+http://www.sketchappsources.com    
+
+
+swift学习
+http://zoltan.co/work/swift.html
+
+
+高质量博客：
+http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
+http://tech.glowing.com/cn/
+
+
+
+http://www.cocoachina.com/ios/20150430/11714.html      涂鸦源码
+http://www.cocoachina.com/ios/20150429/11712.html      wwdc
+
 
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝   4/17
+推荐阅读：
+http://www.cocoachina.com/ios/20150525/11919.html    iOS应用架构谈 view层的组织和调用方案
+
 http://www.zhihu.com/question/22914651
 http://www.cocoachina.com/ios/20150320/11384.html
 https://developer.worldweatheronline.com
@@ -385,3 +416,6 @@ http://wufawei.com/2014/03/symbolicating-ios-crash-logs/
 
 http://blog.csdn.net/yiyaaixuexi/article/details/8970734     多茜博客
 http://blog.csdn.net/logcabin/article/details/8980366#comments
+https://vimeo.com/62266484     UIEdgeInsets video
+
+zmrjxy@vip.qq.com  织梦
