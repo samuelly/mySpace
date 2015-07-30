@@ -311,7 +311,16 @@ UITableViewCell *cell = [table cellForRowAtIndexPath:indexpath];
 27. 使用[[UIApplication sharedApplication] openURL:]加载其它应用
 http://blog.csdn.net/jslsblog/article/details/9931381
 
+28. 将字符串中的数字提取出来 NSScanner
+NSString *str = @"98741235你好";
+NSScanner *scanner = [NSScanner scannerWithString:str];
+[scanner scanUpToCharactersFromSet:[NSCharacterSet decimalDigitCharacterSet] intoString:nil];
+int number;
+[scanner scanInt:&number;];
+NSLog(@"number : %d", number);
 
+输出结果：98741235
+相关链接：http://www.2cto.com/kf/201312/267255.html
 
 
 
@@ -330,6 +339,13 @@ Google mirror:
 第四个：http://64.233.183.163/
 
 第五个：http://201.86.233.217/
+
+
+new:
+https://google-hk.wewell.net/
+https://google-tw.wewell.net/
+https://google-jp.wewell.net/
+https://google-kr.wewell.net/
 
 
 
@@ -361,7 +377,8 @@ https://github.com/ReactiveCocoa/ReactiveCocoa
 https://github.com/MengTo/Spring    spring动画
 
 http://github.ibireme.com/github/list/ios/      github－ios 备忘录
-
+http://www.cocoachina.com/ios/20150727/12720.html      27个提升效率的iOS开源库推荐
+http://www.cocoachina.com/bbs/read.php?tid=239175   快速集成下拉刷新--MJRefresh
 
 
 about design：
@@ -375,7 +392,10 @@ http://www.hellorf.com    设计网站－low
 工具相关：
 sketch：
 https://twitter.com/MengTo/favorites  需翻墙
-http://www.sketchappsources.com    
+http://www.sketchappsources.com  
+
+Homebrew：osx 神器
+http://brew.sh/index_zh-cn.html  
 
 
 swift学习
@@ -390,6 +410,18 @@ http://tech.glowing.com/cn/
 
 http://www.cocoachina.com/ios/20150430/11714.html      涂鸦源码
 http://www.cocoachina.com/ios/20150429/11712.html      wwdc
+
+
+后台server：
+parse： 
+https://www.parse.com/apps/quickstart?onboard=#parse_data/mobile/ios/native/existing
+http://zenius.iteye.com/blog/1634906      介绍文章
+
+
+
+提高开发效率类：  
+http://www.cocoachina.com/ios/20150717/12626.html    提高iOS开发效率的方法和工具
+http://my.oschina.net/joanfen/blog/415058    我是如何收拾代码的
 
 
 
@@ -419,3 +451,18 @@ http://blog.csdn.net/logcabin/article/details/8980366#comments
 https://vimeo.com/62266484     UIEdgeInsets video
 
 zmrjxy@vip.qq.com  织梦
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+7.24:
+// http://www.topcss.org/?cat=96
+http://www.zhihu.com/question/32063728#answer-17281564
+// http://www.ui.cn/detail/26980.html
+
+http://www.jikexueyuan.com    极客学院
+
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+7/30  JSPatch
+http://blog.cnbang.net/tech/2808/
+http://blog.cnbang.net/tech/2855/
