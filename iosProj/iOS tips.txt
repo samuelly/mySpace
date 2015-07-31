@@ -466,3 +466,54 @@ http://www.jikexueyuan.com    极客学院
 7/30  JSPatch
 http://blog.cnbang.net/tech/2808/
 http://blog.cnbang.net/tech/2855/
+
+
+#import “JPEngine.m"
+@implementation AppDelegate
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [JPEngine startEngine];
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://cnbang.net/bugfix.JS"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    if (script) {
+      [JPEngine evaluateScript:script];
+    }
+}];
+   ….
+    return YES;
+}
+@end
+
+//JS
+defineClass("JPTableViewController", {
+  //instance method definitions
+  tableView_didSelectRowAtIndexPath: function(tableView, indexPath) {
+    var row = indexPath.row()
+    if (self.dataSource().length > row) {  //加上判断越界的逻辑
+      var content = self.dataArr()[row];
+      var ctrl = JPViewController.alloc().initWithContent(content);
+      self.navigationController().pushViewController(ctrl);
+    }
+  }
+}, {})
+
+
+// exec js directly
+[JPEngine evaluateScript:@"\
+ var alertView = require('UIAlertView').alloc().init();\
+ alertView.setTitle('Alert');\
+ alertView.setMessage('AlertView from js'); \
+ alertView.addButtonWithTitle('OK');\
+ alertView.show(); \
+"];
+
+// exec js file from network
+[NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://cnbang.net/test.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    [JPEngine evaluateScript:script];
+}];
+
+// exec local js file
+NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"js"];
+NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+[JPEngine evaluateScript:script];

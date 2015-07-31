@@ -10,4 +10,5 @@
 
 @interface JPViewController : UIViewController
 
+@property (nonatomic,strong) UIButton *changeColorBtn;
 @end

@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890D1DE61B6A4DC400F77842 /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = 890D1DE51B6A4DC400F77842 /* demo.js */; };
 		89365E281B6A100100A94D60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 89365E271B6A100100A94D60 /* main.m */; };
 		89365E2B1B6A100100A94D60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 89365E2A1B6A100100A94D60 /* AppDelegate.m */; };
-		89365E2E1B6A100100A94D60 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89365E2D1B6A100100A94D60 /* ViewController.m */; };
 		89365E311B6A100100A94D60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89365E2F1B6A100100A94D60 /* Main.storyboard */; };
 		89365E331B6A100100A94D60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89365E321B6A100100A94D60 /* Images.xcassets */; };
 		89365E361B6A100100A94D60 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89365E341B6A100100A94D60 /* LaunchScreen.xib */; };
 		89365E421B6A100100A94D60 /* JSPatchDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 89365E411B6A100100A94D60 /* JSPatchDemoTests.m */; };
+		89365E4F1B6A156600A94D60 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 89365E4D1B6A156600A94D60 /* JPEngine.m */; };
+		89365E501B6A156600A94D60 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = 89365E4E1B6A156600A94D60 /* JSPatch.js */; };
+		89365E531B6A19AF00A94D60 /* JPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89365E521B6A19AF00A94D60 /* JPViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +30,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		890D1DE51B6A4DC400F77842 /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = demo.js; sourceTree = "<group>"; };
 		89365E221B6A100100A94D60 /* JSPatchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSPatchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89365E261B6A100100A94D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89365E271B6A100100A94D60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		89365E291B6A100100A94D60 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		89365E2A1B6A100100A94D60 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		89365E2C1B6A100100A94D60 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		89365E2D1B6A100100A94D60 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		89365E301B6A100100A94D60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		89365E321B6A100100A94D60 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		89365E351B6A100100A94D60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		89365E3B1B6A100100A94D60 /* JSPatchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSPatchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89365E401B6A100100A94D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89365E411B6A100100A94D60 /* JSPatchDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSPatchDemoTests.m; sourceTree = "<group>"; };
+		89365E4C1B6A156600A94D60 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JPEngine.h; path = JSPatch/JPEngine.h; sourceTree = "<group>"; };
+		89365E4D1B6A156600A94D60 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JPEngine.m; path = JSPatch/JPEngine.m; sourceTree = "<group>"; };
+		89365E4E1B6A156600A94D60 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = JSPatch.js; path = JSPatch/JSPatch.js; sourceTree = "<group>"; };
+		89365E511B6A19AF00A94D60 /* JPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPViewController.h; sourceTree = "<group>"; };
+		89365E521B6A19AF00A94D60 /* JPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +90,11 @@
 			children = (
 				89365E291B6A100100A94D60 /* AppDelegate.h */,
 				89365E2A1B6A100100A94D60 /* AppDelegate.m */,
-				89365E2C1B6A100100A94D60 /* ViewController.h */,
-				89365E2D1B6A100100A94D60 /* ViewController.m */,
-				89365E2F1B6A100100A94D60 /* Main.storyboard */,
+				89365E511B6A19AF00A94D60 /* JPViewController.h */,
+				89365E521B6A19AF00A94D60 /* JPViewController.m */,
+				890D1DE51B6A4DC400F77842 /* demo.js */,
 				89365E321B6A100100A94D60 /* Images.xcassets */,
-				89365E341B6A100100A94D60 /* LaunchScreen.xib */,
+				89365E4B1B6A155000A94D60 /* JSPatch */,
 				89365E251B6A100100A94D60 /* Supporting Files */,
 			);
 			path = JSPatchDemo;
@@ -96,6 +103,8 @@
 		89365E251B6A100100A94D60 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				89365E341B6A100100A94D60 /* LaunchScreen.xib */,
+				89365E2F1B6A100100A94D60 /* Main.storyboard */,
 				89365E261B6A100100A94D60 /* Info.plist */,
 				89365E271B6A100100A94D60 /* main.m */,
 			);
@@ -117,6 +126,16 @@
 				89365E401B6A100100A94D60 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		89365E4B1B6A155000A94D60 /* JSPatch */ = {
+			isa = PBXGroup;
+			children = (
+				89365E4C1B6A156600A94D60 /* JPEngine.h */,
+				89365E4D1B6A156600A94D60 /* JPEngine.m */,
+				89365E4E1B6A156600A94D60 /* JSPatch.js */,
+			);
+			name = JSPatch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +218,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				890D1DE61B6A4DC400F77842 /* demo.js in Resources */,
 				89365E311B6A100100A94D60 /* Main.storyboard in Resources */,
 				89365E361B6A100100A94D60 /* LaunchScreen.xib in Resources */,
+				89365E501B6A156600A94D60 /* JSPatch.js in Resources */,
 				89365E331B6A100100A94D60 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89365E2E1B6A100100A94D60 /* ViewController.m in Sources */,
+				89365E4F1B6A156600A94D60 /* JPEngine.m in Sources */,
 				89365E2B1B6A100100A94D60 /* AppDelegate.m in Sources */,
+				89365E531B6A19AF00A94D60 /* JPViewController.m in Sources */,
 				89365E281B6A100100A94D60 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +438,7 @@
 				89365E471B6A100100A94D60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89365E481B6A100100A94D60 /* Build configuration list for PBXNativeTarget "JSPatchDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +447,7 @@
 				89365E4A1B6A100100A94D60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
