@@ -403,6 +403,7 @@ http://zoltan.co/work/swift.html
 
 
 高质量博客：
+http://onevcat.com/#blog    oneV’s Den
 http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
 http://tech.glowing.com/cn/
 http://blog.sunnyxx.com/2015/07/04/ios-interview/  招聘一个靠谱的 iOS   （其他人给出答案参考：   http://www.cocoachina.com/ios/20150803/12872.html ）
