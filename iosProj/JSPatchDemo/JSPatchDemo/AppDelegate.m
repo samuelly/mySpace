@@ -28,8 +28,11 @@
     
     [JPEngine startEngine];
     NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"js"];
-    NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
-    [JPEngine evaluateScript:script];
+    if (sourcePath) {
+        NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+        [JPEngine evaluateScript:script];
+    }
+   
     return YES;
 }
 

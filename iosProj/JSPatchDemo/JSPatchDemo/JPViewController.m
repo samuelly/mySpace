@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
     
     self.title = @"JSPatch Demo";
-    [self.view setBackgroundColor:[UIColor orangeColor]];
+    [self.view setBackgroundColor:[UIColor blackColor]];
     
     [self initBtn];
 }
