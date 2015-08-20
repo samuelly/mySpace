@@ -403,6 +403,7 @@ http://zoltan.co/work/swift.html
 
 
 高质量博客：
+http://nshipster.cn     这个不错
 http://onevcat.com/#blog    oneV’s Den
 http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
 http://tech.glowing.com/cn/
