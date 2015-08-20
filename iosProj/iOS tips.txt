@@ -479,6 +479,11 @@ NSString *className = NSStringFromClass([UIViewController class]);
 
 
  JSPatch 的原理就是：JS传递字符串给OC，OC通过 Runtime 接口调用和替换OC方法。这是最基础的原理
+ JSPatch是通过Objective-C Runtime的接口通过字符串反射找到对应的类和方法进行调用
+ 
+ 步骤：
+ 1. 在OC执行JS脚本前，通过正则把所有方法调用都改成调用 __c() 函数，再执行这个JS脚本
+ 
 
 #import “JPEngine.m"
 @implementation AppDelegate
