@@ -1,0 +1,7 @@
+
+1. why design UI in a square ?
+design iOS interface in the square and give everything inside the square rules,called constraints. 
+about what happens to them when they get squished down. 
+约束的作用
+
+操作：按住contol键，从控件内部可拖动至square四边进行约束定义。

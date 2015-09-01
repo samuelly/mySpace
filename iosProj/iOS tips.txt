@@ -467,16 +467,35 @@ http://www.zhihu.com/question/32063728#answer-17281564
 http://www.jikexueyuan.com    极客学院
 
 
+
+8.26
+http://www.cocoachina.com/ios/20150731/12819.html  多线程
+http://www.cocoachina.com/ios/20150605/11990.html?utm_source=tuicool   weak
+http://www.cocoachina.com/ios/20150715/12540.html  runtime
+http://opensource.apple.com/tarballs/
+http://blog.sunnyxx.com/2014/03/06/ios_exam_0_key/
+http://tech.glowing.com/cn/method-swizzling-aop/
+http://blog.csdn.net/muzhenhua/article/details/45040841  javascriptcore
+
+https://github.com/samuelly/lantern    lantern
+
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 7/30  JSPatch
 http://blog.cnbang.net/tech/2808/
 http://blog.cnbang.net/tech/2855/
+http://blog.cnbang.net/works/2767/
 
 
 NSString *className = NSStringFromClass([UIViewController class]);
 
 
+JavaScriptCore：
+JSVirtualMachine为JavaScript的运行提供了底层资源，JSContext就为其提供着运行环境，通过- (JSValue *)evaluateScript:(NSString *)script;方法就可以执行一段JavaScript脚本，
+并且如果其中有方法、变量等信息都会被存储在其中以便在需要的时候使用。而JSContext的创建都是基于JSVirtualMachine：- (id)initWithVirtualMachine:(JSVirtualMachine *)virtualMachine;，
+如果是使用- (id)init;进行初始化，那么在其内部会自动创建一个新的JSVirtualMachine对象然后调用前边的初始化方法。
 
+JSValue则可以说是JavaScript和Object-C之间互换的桥梁，它提供了多种方法可以方便地把JavaScript数据类型转换成Objective-C，或者是转换过去
+具体可见： http://blog.csdn.net/muzhenhua/article/details/45040841
 
 
  JSPatch 的原理就是：JS传递字符串给OC，OC通过 Runtime 接口调用和替换OC方法。这是最基础的原理
@@ -536,4 +555,17 @@ NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@
 NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
 [JPEngine evaluateScript:script];
 
+
+
+蓝灯：
+使用方法，双击EXE文件。之后设置好浏览器就可以了
+火狐：进入菜单选项-高级-网络-高级设置-使用系统代理设置即可。
+chrome：菜单设置-更改代理服务器设置，里面改一下即可
+如果安装了switchysharp，就直接在CHROME上点击那个球，选择系统代理设置即可。
+
+
+如何关闭呢？桌面右下角，右键点击关闭即可
+再把上面的使用系统代理设置还原一下即可
+
+补个使用方法，前面不能用的是你少了设置。
 
