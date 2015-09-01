@@ -5,3 +5,11 @@ about what happens to them when they get squished down.
 约束的作用
 
 操作：按住contol键，从控件内部可拖动至square四边进行约束定义。
+
+
+2. swift是强类型语言，每种变量都有自己的类型，但是swift有一个强大的特性叫做类型推导(type inference),可以通过上下文来自动推断出变量的类型。
+eg: let digit = sender.currentTitle    (这里的digit自动推断为string类型)
+
+
+3.  某些变量类型后面的? 表示一种类型：Optional
+	Optional: this type has only 2 values , one value is 'not set' (未设)
