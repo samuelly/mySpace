@@ -12,4 +12,5 @@ eg: let digit = sender.currentTitle    (这里的digit自动推断为string类�
 
 
 3.  某些变量类型后面的? 表示一种类型：Optional
-	Optional: this type has only 2 values , one value is 'not set' (未设)
+	Optional: this type has only 2 values , one value is 'not set' (未设)，一般如果设为nil的话就认为这是‘未设’的
+			another value is 'something' (有值)
