@@ -311,6 +311,7 @@ UITableViewCell *cell = [table cellForRowAtIndexPath:indexpath];
 27. 使用[[UIApplication sharedApplication] openURL:]加载其它应用
 http://blog.csdn.net/jslsblog/article/details/9931381
 
+
 28. 将字符串中的数字提取出来 NSScanner
 NSString *str = @"98741235你好";
 NSScanner *scanner = [NSScanner scannerWithString:str];
@@ -359,7 +360,8 @@ http://www.zhihu.com/question/22914651    github上值得关注学习的iOS项�
 http://www.zhihu.com/question/20016551    系统学习iOS   19楼回答
 
 objc中国
-http://objccn.io   
+http://objccn.io     
+是https://www.objc.io 上文章的翻译
 
 https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010853    auto layout
 
@@ -389,17 +391,31 @@ http://www.hellorf.com    设计网站－low
 
 
 
+
 工具相关：
 sketch：
 https://twitter.com/MengTo/favorites  需翻墙
 http://www.sketchappsources.com  
 
+程序员如何优雅滴使用mac
+http://www.zhihu.com/question/20873070
+
 Homebrew：osx 神器
 http://brew.sh/index_zh-cn.html  
 
+代替系统terminal的优秀软件：iterm2
+http://www.iterm2.com
+
+神级代码编辑器 Sublime Text 
+http://www.cocoachina.com/programmer/20150715/12550.html
+
+
 
 swift学习
+https://github.com/ipader/SwiftGuide     Swift语言主流学习资源
 http://zoltan.co/work/swift.html
+http://www.cocoachina.com/swift/20141219/10710.html   适合新手的6个swift app项目
+
 
 
 高质量博客：
@@ -408,6 +424,8 @@ http://onevcat.com/#blog    oneV’s Den
 http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
 http://tech.glowing.com/cn/
 http://blog.sunnyxx.com/2015/07/04/ios-interview/  招聘一个靠谱的 iOS   （其他人给出答案参考：   http://www.cocoachina.com/ios/20150803/12872.html ）
+
+
 
 
 
