@@ -415,7 +415,11 @@ swift学习
 https://github.com/ipader/SwiftGuide     Swift语言主流学习资源
 http://zoltan.co/work/swift.html
 http://www.cocoachina.com/swift/20141219/10710.html   适合新手的6个swift app项目
+http://www.infoq.com/cn/articles/multi-paradigm-programming-language-swift   从各种编程范式的角度介绍了swift
 
+
+game dev in swift
+http://www.cocoachina.com/game/20150713/12528.html     
 
 
 高质量博客：
