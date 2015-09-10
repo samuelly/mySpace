@@ -24,5 +24,9 @@ class ViewController: UIViewController
         }
         println("digit is \(digit)")
     }
+    
+    @IBAction func enter() {
+        userIsInTheMiddleOfTypingANumber = false
+    }
 }
 
