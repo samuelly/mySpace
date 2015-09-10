@@ -1,82 +1,163 @@
-�����ֿ⣺git clone git@github.com:samuelmk2/mySpace.git
-ͬ�����룺git pull origin master
-�ϴ����룺git push origin master
+拷贝仓库：git clone git@github.com:samuelmk2/mySpace.git
+同步代码：git pull origin master
+上传代码：git push origin master
 
-һ.�������
+一.常用命令：
 git init
-��ʼ��git�ֿ�
+初始化git仓库
 
 git add 
-���Թ������޸ģ������������ļ�ִ��git add����ʱ���ݴ�����Ŀ¼���������£�ͬʱ�������޸ģ������������ļ����ݻᱻд�뵽������е�һ���µĶ����У����ö����ID����¼���ݴ������ļ������С�
+当对工作区修改（或新增）的文件执行git add命令时，暂存区的目录树将被更新，同时工作区修改（或新增）的文件内容会被写入到对象库中的一个新的对象中，而该对象的ID被记录在暂存区的文件索引中。
 
 git commit
-��ִ���ύ������git commit��ʱ���ݴ�����Ŀ¼����д���汾�⣨����⣩�У�master��֧������Ӧ�ĸ��£���master����ָ���Ŀ¼�������ύʱԭ�ݴ�����Ŀ¼����
+当执行提交操作（git commit）时，暂存区的目录树会写到版本库（对象库）中，master分支会做相应的更新，即master最新指向的目录树就是提交时原暂存区的目录树。
 
 git checkout <file> 
-���������file�ļ��в������ύ�������޸ģ����ָ�����
+清除工作区file文件中不打算提交的所有修改（即恢复）。
 
 ***********************************************************************************************************************
-git reset����(��Ҫ)��
+git reset命令(重要)：
 git reset  <paths>
-git reset HEAD <paths> (Ч��ͬ��)
-�൱��ȡ��֮ǰִ�е�git add <paths>����ʱ�ı���ݴ�����
+git reset HEAD <paths> (效果同上)
+相当于取消之前执行的git add <paths>命令时改变的暂存区。
 
-����������--hard��--soft��--mixed(Ĭ��)
-ʹ�ò�����--hard���磺 git reset --hard <commit>��Ч��:
-(1).�滻���õ�ָ������ָ���µ��ύID.
-(2).�滻�ݴ������滻���ݴ��������ݺ�����ָ���Ŀ¼��һ�¡�
-(3).�滻���������滻�󣬹����������ݱ�ú��ݴ���һ�£�Ҳ��HEAD��ָ���Ŀ¼��������ͬ��
+三个参数：--hard，--soft，--mixed(默认)
+使用参数：--hard，如： git reset --hard <commit>，效果:
+(1).替换引用的指向，引用指向新的提交ID.
+(2).替换暂存区，替换后，暂存区的内容和引用指向的目录树一致。
+(3).替换工作区，替换后，工作区的内容变得和暂存区一致，也和HEAD所指向的目录树内容相同。
 
-ʹ�ò�����--soft���磺 git reset --soft <commit>��Ч��:
-(1).ֻ�ı����õ�ָ�򣬲��ı��ݴ����͹�������
+使用参数：--soft，如： git reset --soft <commit>，效果:
+(1).只改变引用的指向，不改变暂存区和工作区。
 
-ʹ�ò�����--mixed��ʹ�ò���(Ĭ��Ϊ--mixed)���磺 git reset <commit>��Ч��:
-(1).�滻���õ�ָ������ָ���µ��ύID.
-(2).�滻�ݴ������滻���ݴ��������ݺ�����ָ���Ŀ¼��һ�¡������ı乤������
+使用参数：--mixed或不使用参数(默认为--mixed)，如： git reset <commit>，效果:
+(1).替换引用的指向，引用指向新的提交ID.
+(2).替换暂存区，替换后，暂存区的内容和引用指向的目录树一致。但不改变工作区。
 
-һЩ��������ӣ�
-git reset (���ǣ�git reset HEAD)
-����HEADָ���Ŀ¼�������ݴ�����������������Ӱ�죬�൱�ڽ�֮ǰ��git add ������µ��ݴ��������ݳ����ݴ���������ҳδ�ı䣬��Ϊ�������õ�HEAD�൱��û�����á�
+一些命令的例子：
+git reset (或是：git reset HEAD)
+仅用HEAD指向的目录树重置暂存区，工作区不会受影响，相当于将之前用git add 命令更新到暂存区的内容撤出暂存区。引用页未改变，因为引用重置到HEAD相当于没有重置。
 
-git reset filename (���ǣ�git reset HEAD filename)
-�����ļ�filename�ĸĶ������ݴ������ݴ����������ļ����ı䡣�൱�ڶ�����git add filename�ķ��������
+git reset filename (或是：git reset HEAD filename)
+仅将文件filename的改动撤出暂存区，暂存区中其他文件不改变。相当于对命令git add filename的反向操作。
 
 git reset --soft HEAD^
-���������ݴ������ı䣬����������ǰ����һ�Ρ����������ύ���ύ˵�����ύ�ĸ��Ĳ�����ʱ������������ύ�Ա������ύ��
+工作区和暂存区不改变，但是引用向前回退一次。当对最新提交的提交说明或提交的更改不满意时，撤销最近的提交以便重新提交。
 
-git reset HEAD^ (���ǣ�git reset --mixed HEAD^)
-���������ı䣬�����ݴ�������˵���һ���ύ֮ǰ������Ҳ�����һ�Ρ�
+git reset HEAD^ (或是：git reset --mixed HEAD^)
+工作区不改变，但是暂存区会回退到上一次提交之前，引用也会回退一次。
 
 git reset --hard HEAD^
-���׳���������ύ�����û��˵�ǰһ�Σ����ҹ��������ݴ���������˵���һ���ύ��״̬������һ���������ύȫ����ʧ��
+彻底撤销最近的提交。引用回退到前一次，而且工作区和暂存区都会回退到上一次提交的状态。自上一次以来的提交全部丢失。
+
+
+类似时光穿梭：
+HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
+穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
+要重返未来，用git reflog查看命令历史，可以找到每一次操作的哈西值，以便确定要回到未来的哪个版本。
+************************************************************************************************************************
+branch 分支：
+
+创建一个分支dev，并切换过去：
+git checkout -b dev
+即等于如下：
+git branch dev
+git checkout dev
+
+删除：
+git branch -d dev
+
 ************************************************************************************************************************
 
-��.�������
+二.其他命令：
 git --help
 
 git help COMMAND 
-�鿴����COMMAND���÷����磺git help diff
+查看具体COMMAND的用法，如：git help diff
 
-git grep  "�ļ���������"
-�����������ڵ��ļ����ݡ�
+git grep  "文件内容搜索"
+搜索工作区内的文件内容。
 
 git commit --amend --allow-empty
---amend�����ɶ�֮ǰ�ύʱ����Ϣ���޲���
---allow-empty�����������հ������ύ
+--amend参数可对之前提交时的信息做修补，
+--allow-empty参数可允许空白内容提交
 
-git diff �ȽϹ��������ύ�ݴ����Ĵ������
-git diff HEAD �ȽϹ������ͱ��ذ汾�⣨HEAD���Ĵ������
-git diff --cached (or --staged) �Ƚ��ύ�ݴ����ͱ��ذ汾��Ĵ������
+git diff 比较工作区和提交暂存区的代码差异
+git diff HEAD 比较工作区和本地版本库（HEAD）的代码差异
+git diff --cached (or --staged) 比较提交暂存区和本地版本库的代码差异
 
 git stash
-���湤�����ȣ��������������ݴ�����
+保存工作进度（包括工作区和暂存区）
 
 git config --global color.ui true
-git��ɫ
+git着色
 
 git mv -f [new file name] [old file name]
 
-��.��Ҫ���
-1.�ݴ���(stage ���Ϊ index)
+三.重要概念：
+1.暂存区(stage 或称为 index)
 
-2.HEADʵ������һ��ָ�򱾵ذ汾��master��֧��һ��"ָ��"
+2.HEAD实际上是一个指向本地版本库master分支的一个"指针"
+
+
+*************************************************************************************************************************
+
+.gitignore的语法
+
+# 为注释行，空行不匹配任何文件，这两个特征可以使.gitignore文件可读性强一些。 通过 ! 取反。
+斜杆/ 结尾的字符，被当做文件夹处理，文件夹下的所有文件将被忽略。
+
+glob语法匹配（所谓的 glob 模式是指 shell 所使用的简化了的正则表达式)
+* [ab09] ? [0-9a-zA-Z] \
+匹配任意字符 匹配多种可能 匹配单个字符 匹配一个范围 转义字符
+
+星号(*)匹配零个或多个任
+意字符;[abc] 匹配任何一个列在方括号中的字符(这个例子要么匹配一个 a,要么匹配一
+个 b,要么匹配一个 c);问号(?)只匹配一个任意字符;如果在方括号中使用短划线分
+隔两个字符,表示所有在这两个字符范围内的都可以匹配(比如 [0-9] 表示匹配所有 0 到
+9 的数字)。
+
+
+
+
+
+xcode下的.gitignore 文件常用配置：
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+
+## Other
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# http://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+#Pods/
+
+***************************************************************************************************************
