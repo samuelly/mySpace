@@ -414,12 +414,16 @@ http://www.cocoachina.com/programmer/20150715/12550.html
 swift学习
 https://github.com/ipader/SwiftGuide     Swift语言主流学习资源
 http://zoltan.co/work/swift.html
-http://www.cocoachina.com/swift/20141219/10710.html   适合新手的6个swift app项目
+https://itunes.apple.com/cn/course/developing-ios-8-apps-swift/id961180099    swift stanford lesson
 http://www.infoq.com/cn/articles/multi-paradigm-programming-language-swift   从各种编程范式的角度介绍了swift
 
 
 game dev in swift
-http://www.cocoachina.com/game/20150713/12528.html     
+http://www.cocoachina.com/game/20150713/12528.html      SpriteKit在iOS 9和OS X 10.11中的新特性
+http://www.cocoachina.com/swift/20141219/10710.html    想开发iPhone App？来看看这个6个适合新手的项目吧
+http://www.cocoachina.com/game/20150908/13362.html    推荐：国外游戏开发者学习游戏设计的免费资源
+
+http://www.cocoachina.com/game/20150906/13340.html  独立游戏人：像素风格游戏制作分享（很不错的像素绘画教程）
 
 
 高质量博客：
@@ -577,7 +581,9 @@ NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@
 NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
 [JPEngine evaluateScript:script];
 
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 蓝灯：
 使用方法，双击EXE文件。之后设置好浏览器就可以了
@@ -591,3 +597,9 @@ chrome：菜单设置-更改代理服务器设置，里面改一下即可
 
 补个使用方法，前面不能用的是你少了设置。
 
+
+
+pro 升级：
+http://www.dgtle.com/portal.php?mod=view&aid=296&page=1#comments_top
+https://support.apple.com/zh-cn/HT1270   官网查内详细
+http://www.07net01.com/linux/Macbook_Pro_shengji_SSD_gutaiyingpan_shujuzhuanyiwanquanjiaocheng_21373_1351063375.html
