@@ -324,6 +324,48 @@ NSLog(@"number : %d", number);
 相关链接：http://www.2cto.com/kf/201312/267255.html
 
 
+29.
+之前在面试过程中，发现一些面试者对深浅拷贝、可变不可变拷贝的理解有问题，后来在网上也发现有很多误导性的文章，这里总结了一下。
+附上demo，下面的内容围绕这个demo来实现。 
+
+在最开始，我们需要清楚一些关于内存分配方式的基础知识。
+一般来说分为栈、堆、静态变量存储区、全局变量存储区、代码区。
+前两个大家都懂的。通常将后三个合并称之为静态存储区，存储的是一些全局变量、静态变量、常量、执行代码等。
+在Objective-C中，不可变数组、不可变字典以及一些常量字符串，都是分配在这个区域的，我们先要明确这一点。
+所以在提到深浅拷贝的时候，用NSArray举例子的，只能说对内存分配方式就不清楚，因为对一个不可变数组进行copy、mutableCopy操作，它实际上返回的是一个对象，
+跟深浅拷贝无关，因为都是按照retain来处理的。这也就是很多所谓教程提到的指针拷贝。
+
+下面先说一下可变拷贝和不可变拷贝，分别遵循NSCopying和NSMutableCopying协议，需要对应实现copyWithZone:方法和mutableCopyWithZone:方法。
+分两种情况来讲，一种是系统容器类，一种是自定义类。
+一、系统容器类。
+例如NSArray、NSDictionary，它们已经实现了上面两个协议。
+对于它们来说，规则很简单，obj2 = [obj1 copy]返回的必然是一个不可变对象，无论obj1是可变对象还是不可变对象。如果obj1是一个不可变对象，那么它们指向同一个对象，也是上一条我提到过的。
+obj2 = [obj1 mutableCopy]返回的必然是一个可变对象，无论obj1是可变对象还是不可变对象。即使obj1也是一个可变对象，它们仍指向不同地址，是两个对象。
+二、自定义类。
+因为copyWithZone:和mutableCopyWithZone:完全由自己来实现，所以代码的不同实现方式，决定了返回对象是什么。
+在demo中Element类的copyWithZone:有注释，感兴趣的可以参考一下。
+极端一点的例子，例如你直接在copyWithZone:方法中return self；那么obj2 = [obj1 copy]相当于obj2 = obj1，只是一个assign，没有做任何其它操作。 
+
+下面着重说一下浅拷贝和深拷贝。
+首先顾名思义，无论是浅拷贝还是深拷贝，都有一个拷贝在里面，那些说浅拷贝相当于retain、什么所谓指针拷贝的，建议还是不要误人子弟了好吧。
+这里我们以NSMutableArray为例
+NSMutableArray *element = [NSMutableArray arrayWithObject:@1];
+NSMutableArray *array = [NSMutableArray arrayWithObject:element];
+
+id mutableCopyArray = [array mutableCopy];
+这一句代码就是浅拷贝，是拷贝了容器自身，返回了一个新的可变数组，指向不同的内存地址。
+内部的元素依然是公用的，也就是说，mutableCopyArray[0]也指向element，[mutableCopyArray[0] addObject:***]会影响到array的结果。
+
+id deepMutableCopyArray = [array test_deepMutableCopy];
+这一句代码对应的实现是深拷贝，首先它也拷贝了容器自身，返回了一个新的可变数组，指向不同的内存地址。
+其次，对内部的元素也进行了拷贝动作，也就是说deepMutableCopyArray[0]是一个新的可变数组，和原来的element是两个数组，修改[deepMutableCopyArray[0] addObject:***]并不会影响到array的结果。
+
+上面这些代码在demo中有，感兴趣或者抱怀疑态度的，可以运行了试试或者加一些log来分析结果。
+        
+demo及原帖：http://www.cocoachina.com/bbs/read.php?tid-323045-page-1.html
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
 
 Jenkins：
 http://jenkins-ci.org/content/thank-you-downloading-os-x-installer
@@ -358,10 +400,9 @@ http://www.cocoachina.com/programmer/20150123/11009.html   独立开发者
 http://www.cocoachina.com/ios/20150111/10894.html   学习资料整理
 http://www.zhihu.com/question/22914651    github上值得关注学习的iOS项目
 http://www.zhihu.com/question/20016551    系统学习iOS   19楼回答
+http://www.imooc.com/article/1467   自学 iOS 开发的一些经验（介绍了很多好的资源）
 
-objc中国
-http://objccn.io     
-是https://www.objc.io 上文章的翻译
+
 
 https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010853    auto layout
 
@@ -409,13 +450,16 @@ http://www.iterm2.com
 神级代码编辑器 Sublime Text 
 http://www.cocoachina.com/programmer/20150715/12550.html
 
+https://github.com/samuelly/lantern    lantern
 
 
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 swift学习
 https://github.com/ipader/SwiftGuide     Swift语言主流学习资源
 http://zoltan.co/work/swift.html
 https://itunes.apple.com/cn/course/developing-ios-8-apps-swift/id961180099    swift stanford lesson
 http://www.infoq.com/cn/articles/multi-paradigm-programming-language-swift   从各种编程范式的角度介绍了swift
+http://www.cocoachina.com/ios/20150906/13318.html    Swift学习: 从Objective-C到Swift
 
 
 game dev in swift
@@ -424,18 +468,28 @@ http://www.cocoachina.com/swift/20141219/10710.html    想开发iPhone App？来
 http://www.cocoachina.com/game/20150908/13362.html    推荐：国外游戏开发者学习游戏设计的免费资源
 
 http://www.cocoachina.com/game/20150906/13340.html  独立游戏人：像素风格游戏制作分享（很不错的像素绘画教程）
-
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 高质量博客：
 http://nshipster.cn     这个不错
+http://nshipster.com  原版的
+
+objc中国
+http://objccn.io     
+是https://www.objc.io 上文章的翻译
+
+https://iosdevweekly.com   国外每周更新 内容多为这一星期里值得关注的Github项目、文章、工具等。
+
+http://www.raywenderlich.com  很多详细又全面的教程，不容错过。
+
 http://onevcat.com/#blog    oneV’s Den
 http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
 http://tech.glowing.com/cn/
 http://blog.sunnyxx.com/2015/07/04/ios-interview/  招聘一个靠谱的 iOS   （其他人给出答案参考：   http://www.cocoachina.com/ios/20150803/12872.html ）
 
 
-
-
+编程技术：
+http://www.liaoxuefeng.com          廖雪峰博客，git，js，python教程都不错
 
 
 http://www.cocoachina.com/ios/20150430/11714.html      涂鸦源码
@@ -448,12 +502,16 @@ https://www.parse.com/apps/quickstart?onboard=#parse_data/mobile/ios/native/exis
 http://zenius.iteye.com/blog/1634906      介绍文章
 
 
+代码管控：
+https://www.atlassian.com/software/bitbucket/overview     Bitbucket：支持免费私有仓库
+
 
 提高开发效率类：  
 http://www.cocoachina.com/ios/20150717/12626.html    提高iOS开发效率的方法和工具
 http://my.oschina.net/joanfen/blog/415058    我是如何收拾代码的
 
-
+apple open source：
+http://www.opensource.apple.com/tarballs/
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝   4/17
 推荐阅读：
@@ -481,7 +539,21 @@ http://blog.csdn.net/yiyaaixuexi/article/details/8970734     多茜博客
 http://blog.csdn.net/logcabin/article/details/8980366#comments
 https://vimeo.com/62266484     UIEdgeInsets video
 
-zmrjxy@vip.qq.com  织梦
+
+专题：
+
+runtime：
+http://www.cocoachina.com/ios/20150715/12540.html  runtime
+http://www.cocoachina.com/ios/20150818/13075.html   了解方法缓存
+
+逆向工程：
+http://www.cnblogs.com/csutanyu/p/3575297.html    一些资料介绍
+http://www.cocoachina.com/industry/20130624/6463.html   iOS汇编教程：ARM(1)和ARM(2)
+
+
+国外文章：
+https://www.bignerdranch.com/blog/leveling-up/
+
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
@@ -497,13 +569,13 @@ http://www.jikexueyuan.com    极客学院
 8.26
 http://www.cocoachina.com/ios/20150731/12819.html  多线程
 http://www.cocoachina.com/ios/20150605/11990.html?utm_source=tuicool   weak
-http://www.cocoachina.com/ios/20150715/12540.html  runtime
+
 http://opensource.apple.com/tarballs/
 http://blog.sunnyxx.com/2014/03/06/ios_exam_0_key/
 http://tech.glowing.com/cn/method-swizzling-aop/
 http://blog.csdn.net/muzhenhua/article/details/45040841  javascriptcore
 
-https://github.com/samuelly/lantern    lantern
+
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 7/30  JSPatch
@@ -531,58 +603,9 @@ JSValue则可以说是JavaScript和Object-C之间互换的桥梁，它提供了�
  1. 在OC执行JS脚本前，通过正则把所有方法调用都改成调用 __c() 函数，再执行这个JS脚本
  
 
-#import “JPEngine.m"
-@implementation AppDelegate
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    [JPEngine startEngine];
-    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://cnbang.net/bugfix.JS"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-    NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    if (script) {
-      [JPEngine evaluateScript:script];
-    }
-}];
-   ….
-    return YES;
-}
-@end
-
-//JS
-defineClass("JPTableViewController", {
-  //instance method definitions
-  tableView_didSelectRowAtIndexPath: function(tableView, indexPath) {
-    var row = indexPath.row()
-    if (self.dataSource().length > row) {  //加上判断越界的逻辑
-      var content = self.dataArr()[row];
-      var ctrl = JPViewController.alloc().initWithContent(content);
-      self.navigationController().pushViewController(ctrl);
-    }
-  }
-}, {})
-
-
-// exec js directly
-[JPEngine evaluateScript:@"\
- var alertView = require('UIAlertView').alloc().init();\
- alertView.setTitle('Alert');\
- alertView.setMessage('AlertView from js'); \
- alertView.addButtonWithTitle('OK');\
- alertView.show(); \
-"];
-
-// exec js file from network
-[NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://cnbang.net/test.js"]] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-    NSString *script = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    [JPEngine evaluateScript:script];
-}];
-
-// exec local js file
-NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"sample" ofType:@"js"];
-NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
-[JPEngine evaluateScript:script];
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
+zmrjxy@vip.qq.com  织梦
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 蓝灯：
@@ -597,9 +620,11 @@ chrome：菜单设置-更改代理服务器设置，里面改一下即可
 
 补个使用方法，前面不能用的是你少了设置。
 
-
+公司邮箱密码：88wsLP
+http://uumconsole.iwjwagent.com/user/center/forgetPassword.do   密码获得
 
 pro 升级：
 http://www.dgtle.com/portal.php?mod=view&aid=296&page=1#comments_top
 https://support.apple.com/zh-cn/HT1270   官网查内详细
 http://www.07net01.com/linux/Macbook_Pro_shengji_SSD_gutaiyingpan_shujuzhuanyiwanquanjiaocheng_21373_1351063375.html
+http://benyouhui.it168.com/thread-1928067-1-1.html    内有查询是否系统支持sata3接口的方法
