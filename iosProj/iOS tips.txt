@@ -585,7 +585,7 @@ http://blog.csdn.net/muzhenhua/article/details/45040841  javascriptcore
 http://blog.cnbang.net/tech/2808/
 http://blog.cnbang.net/tech/2855/
 http://blog.cnbang.net/works/2767/
-
+https://github.com/bang590/JSPatch
 
 NSString *className = NSStringFromClass([UIViewController class]);
 
