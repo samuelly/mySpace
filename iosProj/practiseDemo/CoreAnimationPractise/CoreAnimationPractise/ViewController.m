@@ -28,11 +28,14 @@
     _testView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:_testView];
     
-    CALayer *blueLayer = [CALayer layer];
-    blueLayer.frame = CGRectMake(50, 50, 100, 100);
-    blueLayer.backgroundColor = [UIColor blueColor].CGColor;
-    [_testView.layer addSublayer:blueLayer];
+//    CALayer *blueLayer = [CALayer layer];
+//    blueLayer.frame = CGRectMake(50, 50, 100, 100);
+//    blueLayer.backgroundColor = [UIColor blueColor].CGColor;
+//    [_testView.layer addSublayer:blueLayer];
     
+    UIImage *image = [UIImage imageNamed:@"sadBaby"];
+    _testView.layer.contents = (__bridge id)image.CGImage;
+    _testView.layer.contentsGravity = kCAGravityResizeAspect;
 }
 
 - (void)didReceiveMemoryWarning {
