@@ -627,6 +627,7 @@ chrome：菜单设置-更改代理服务器设置，里面改一下即可
 http://uumconsole.iwjwagent.com/user/center/forgetPassword.do   密码获得
 
 pro 升级：
+http://bbs.pceva.com.cn/forum-124-1.html  很不错的ssd硬盘研究论坛
 http://www.dgtle.com/portal.php?mod=view&aid=296&page=1#comments_top
 https://support.apple.com/zh-cn/HT1270   官网查内详细
 http://www.07net01.com/linux/Macbook_Pro_shengji_SSD_gutaiyingpan_shujuzhuanyiwanquanjiaocheng_21373_1351063375.html
