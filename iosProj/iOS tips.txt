@@ -558,6 +558,9 @@ https://www.bignerdranch.com/blog/leveling-up/
 Core-Animation-Advanced-Techniques:
 http://www.cocoachina.com/ios/20150104/10814.html
 http://www.cocoachina.com/ios/20150104/10816.html
+
+iOS应用架构谈：（不错的系列）
+http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 7.24:
@@ -586,6 +589,7 @@ http://blog.cnbang.net/tech/2808/
 http://blog.cnbang.net/tech/2855/
 http://blog.cnbang.net/works/2767/
 https://github.com/bang590/JSPatch
+https://github.com/bang590/JSPatchConvertor  jspatch转换oc
 
 NSString *className = NSStringFromClass([UIViewController class]);
 
