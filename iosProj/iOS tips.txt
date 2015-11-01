@@ -384,6 +384,9 @@ Google mirror:
 第五个：http://201.86.233.217/
 
 
+https://g.eeload.com/    常用。。。
+
+
 new:
 https://google-hk.wewell.net/
 https://google-tw.wewell.net/
@@ -429,6 +432,7 @@ http://www.ui.cn/project.php?id=26753
 http://cubic-bezier.com/#.09,-0.28,.83,.84
 https://unsplash.com      设计网站
 http://www.hellorf.com    设计网站－low
+http://www.iconpng.com/   icon图标
 
 
 
@@ -466,6 +470,8 @@ game dev in swift
 http://www.cocoachina.com/game/20150713/12528.html      SpriteKit在iOS 9和OS X 10.11中的新特性
 http://www.cocoachina.com/swift/20141219/10710.html    想开发iPhone App？来看看这个6个适合新手的项目吧
 http://www.cocoachina.com/game/20150908/13362.html    推荐：国外游戏开发者学习游戏设计的免费资源
+《2D iOS & tvOS Games by Tutorials》  新书，2015.10.28 release
+
 
 http://www.cocoachina.com/game/20150906/13340.html  独立游戏人：像素风格游戏制作分享（很不错的像素绘画教程）
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -637,3 +643,10 @@ http://www.07net01.com/linux/Macbook_Pro_shengji_SSD_gutaiyingpan_shujuzhuanyiwa
 http://benyouhui.it168.com/thread-1928067-1-1.html    内有查询是否系统支持sata3接口的方法
 http://bbs.pceva.com.cn/forum-124-1.html  很不错的ssd硬盘研究论坛
 http://v.youku.com/v_show/id_XNjg3MTQxOTU2.html?from=s1.8-1-1.2   王自如换ssd视频（好评）
+
+制作u盘启动盘时的命令：
+sudo /Applications/Install\ OS\ X\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Capitan --applicationpath /Applications/Install\ OS\ X\ Capitan.app --nointeraction
+    
+
+
+
