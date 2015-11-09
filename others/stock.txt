@@ -1,0 +1,10 @@
+stock：
+http://kuaixun.stcn.com/index.shtml    证券时报
+http://www.taoguba.com.cn/blog/252069   
+http://www.cninfo.com.cn/cninfo-new/index  巨潮
+http://www.qlong.org/data/f10/structure.aspx?City=&Main=     个股查询
+
+
+
+tool:
+mac 富途证券
