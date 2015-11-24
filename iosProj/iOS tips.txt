@@ -519,6 +519,9 @@ http://my.oschina.net/joanfen/blog/415058    我是如何收拾代码的
 apple open source：
 http://www.opensource.apple.com/tarballs/
 
+mac osx developement
+https://developer.apple.com/library/mac/navigation/#       官网文档
+
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝   4/17
 推荐阅读：
 http://www.cocoachina.com/ios/20150525/11919.html    iOS应用架构谈 view层的组织和调用方案
@@ -567,6 +570,9 @@ http://www.cocoachina.com/ios/20150104/10816.html
 
 iOS应用架构谈：（不错的系列）
 http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
+
+xcode 7
+http://www.cnblogs.com/iOSv587country/p/4862989.html   使用Xcode7的Instruments检测解决iOS内存泄露
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 7.24:
@@ -648,5 +654,30 @@ http://v.youku.com/v_show/id_XNjg3MTQxOTU2.html?from=s1.8-1-1.2   王自如换ss
 sudo /Applications/Install\ OS\ X\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Capitan --applicationpath /Applications/Install\ OS\ X\ Capitan.app --nointeraction
     
 
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+临时：
+http://www.babytree.com/community/group21668/topic_2111357.html#nav_title_target
+
+
+http://blog.leichunfeng.com/blog/2015/06/14/objective-c-method-swizzling-best-practice/  
+http://mp.weixin.qq.com/s?__biz=MzIzMzA4NjA5Mw==&mid=214119033&idx=1&sn=1c7628fb1f0367f0caf022b1ab6ff077&scene=23&srcid=10166ul9QrKKvlCS9xJYsmcH#rd
+http://stackoverflow.com/questions/31935013/in-xcode-7-ios-9-application-windows-are-expected-to-have-a-root-view-controll 
+http://stackoverflow.com/questions/32627519/ios-9-splash-screen-is-black
+http://zhidao.baidu.com/question/264878027672910165.html?fr=iks&word=xcode7+launch+image&ie=gbk
+
+http://www.paintcodeapp.com/news/iphone-6-screens-demystified
+http://www.jianshu.com/p/83ee7ffb9d7d
+http://www.cocoachina.com/ios/20150104/10816.html
+https://github.com/samuelly/iOSInterviewQuestions
+http://blog.sunnyxx.com/tags/iOS9/
+http://blog.ibireme.com/2015/05/18/runloop/
+http://www.cocoachina.com/ios/20140829/9480.html
+
+http://www.raywenderlich.com/category/swift
+http://www.raywenderlich.com/115253/swift-2-tutorial-a-quick-start
+http://www.raywenderlich.com/category/sprite-kit
