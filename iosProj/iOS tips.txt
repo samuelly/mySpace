@@ -445,6 +445,9 @@ http://www.sketchappsources.com
 程序员如何优雅滴使用mac
 http://www.zhihu.com/question/20873070
 
+Mac 开发配置手册
+http://www.jianshu.com/p/a2fc4631910c?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io
+
 Homebrew：osx 神器
 http://brew.sh/index_zh-cn.html  
 
@@ -464,6 +467,10 @@ http://zoltan.co/work/swift.html
 https://itunes.apple.com/cn/course/developing-ios-8-apps-swift/id961180099    swift stanford lesson
 http://www.infoq.com/cn/articles/multi-paradigm-programming-language-swift   从各种编程范式的角度介绍了swift
 http://www.cocoachina.com/ios/20150906/13318.html    Swift学习: 从Objective-C到Swift
+https://github.com/apple/swift      swift开源地址
+https://swift.org/documentation/api-design-guidelines.html 
+http://swiftweekly.cn/archive.html   一个swift开发者周刊
+
 
 
 game dev in swift
@@ -492,7 +499,9 @@ http://onevcat.com/#blog    oneV’s Den
 http://blog.devtang.com      唐巧blog
 http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
 http://tech.glowing.com/cn/
-http://blog.sunnyxx.com/2015/07/04/ios-interview/  招聘一个靠谱的 iOS   （其他人给出答案参考：   http://www.cocoachina.com/ios/20150803/12872.html ）
+http://blog.sunnyxx.com/2015/07/04/ios-interview/  招聘一个靠谱的 iOS   https://github.com/ChenYilong/iOSInterviewQuestions    （其他人给出答案参考：   http://www.cocoachina.com/ios/20150803/12872.html ）
+http://blog.ibireme.com  YYModel系列的作者
+https://github.com/ibireme
 
 
 编程技术：
@@ -548,6 +557,10 @@ http://wufawei.com/2014/03/symbolicating-ios-crash-logs/
 http://blog.csdn.net/yiyaaixuexi/article/details/8970734     多茜博客
 http://blog.csdn.net/logcabin/article/details/8980366#comments
 https://vimeo.com/62266484     UIEdgeInsets video
+
+
+资源汇总：
+http://www.cocoachina.com/ios/20151210/14635.html    94个iOS开发资源推荐，帮你加速应用开发
 
 
 专题：
@@ -625,7 +638,7 @@ JSValue则可以说是JavaScript和Object-C之间互换的桥梁，它提供了�
 
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-zmrjxy@vip.qq.com  织梦
+
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 蓝灯：
@@ -640,8 +653,6 @@ chrome：菜单设置-更改代理服务器设置，里面改一下即可
 
 补个使用方法，前面不能用的是你少了设置。
 
-公司邮箱密码：88wsLP
-http://uumconsole.iwjwagent.com/user/center/forgetPassword.do   密码获得
 
 pro ssd 升级：
 http://www.dgtle.com/portal.php?mod=view&aid=296&page=1#comments_top
@@ -654,9 +665,10 @@ http://v.youku.com/v_show/id_XNjg3MTQxOTU2.html?from=s1.8-1-1.2   王自如换ss
 制作u盘启动盘时的命令：
 sudo /Applications/Install\ OS\ X\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Capitan --applicationpath /Applications/Install\ OS\ X\ Capitan.app --nointeraction
     
+    
+https://support.apple.com/zh-cn/HT203207  苹果的电源线保修策略
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
 
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
@@ -682,3 +694,11 @@ http://www.cocoachina.com/ios/20140829/9480.html
 http://www.raywenderlich.com/category/swift
 http://www.raywenderlich.com/115253/swift-2-tutorial-a-quick-start
 http://www.raywenderlich.com/category/sprite-kit
+
+12/23
+http://www.cocoachina.com/ios/20151127/14394.html
+http://api.buzz.cn/index.php/Mpd/course?courseid=10819&paikeid=5892&from=timeline&isappinstalled=0
+http://fykec.github.io/2015/12/10/iOS-Layout%20技术回顾及Masonry介绍.html?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io
+
+
+http://www.miaopai.com/show/u-fOpin3o3qbeAHfGN2kFg__.htm     跑步
