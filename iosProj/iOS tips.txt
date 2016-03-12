@@ -441,6 +441,7 @@ http://www.iconpng.com/   icon图标
 sketch：
 https://twitter.com/MengTo/favorites  需翻墙
 http://www.sketchappsources.com  
+http://www.sketchcn.com/sketch-chinese-user-manual.html    sketch中文用户手册
 
 程序员如何优雅滴使用mac
 http://www.zhihu.com/question/20873070
@@ -500,6 +501,7 @@ http://blog.devtang.com      唐巧blog
 http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
 http://tech.glowing.com/cn/
 http://blog.sunnyxx.com/2015/07/04/ios-interview/  招聘一个靠谱的 iOS   https://github.com/ChenYilong/iOSInterviewQuestions    （其他人给出答案参考：   http://www.cocoachina.com/ios/20150803/12872.html ）
+
 http://blog.ibireme.com  YYModel系列的作者
 https://github.com/ibireme
 
@@ -528,6 +530,7 @@ http://my.oschina.net/joanfen/blog/415058    我是如何收拾代码的
 
 apple open source：
 http://www.opensource.apple.com/tarballs/
+https://opensource.apple.com/tarballs/objc4/
 
 mac osx developement
 https://developer.apple.com/library/mac/navigation/#       官网文档
@@ -701,4 +704,25 @@ http://api.buzz.cn/index.php/Mpd/course?courseid=10819&paikeid=5892&from=timelin
 http://fykec.github.io/2015/12/10/iOS-Layout%20技术回顾及Masonry介绍.html?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io
 
 
+16／3/9
+ http://xunyanan.com/blog/2013/12/10/iosjin-jie-mian-shi-ti/
+ 
+ http://www.jianshu.com/p/246dc6e8043a    block tips
+ 
+ http://www.cocoachina.com/ios/20160219/15330.html    iOS/OS X内存管理(一)：基本概念与原理
+ http://www.cocoachina.com/ios/20160222/15333.html    iOS/OS X 内存管理(二)：借助工具解决内存问题
+ 
+ http://www.cocoachina.com/ios/20160223/15347.html     深入浅出--iOS的TCP/IP协议族剖析&&Socket
+ 
+ http://www.jianshu.com/p/2463f92aae07
+ http://www.liubingyang.com/like/mac-shadowsocksx.html
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+others：
 http://www.miaopai.com/show/u-fOpin3o3qbeAHfGN2kFg__.htm     跑步
+
+english：
+http://www.zhihu.com/question/21454131  选择英文电台
+
+stock：
+http://xueqiu.com/1172522226     江渚渔樵99
+http://www.guzhang.com/info/
