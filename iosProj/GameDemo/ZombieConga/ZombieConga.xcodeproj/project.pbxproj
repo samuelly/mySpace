@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04E4A14D1CA6AEF70045CE57 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 04E4A14C1CA6AEF70045CE57 /* images */; };
 		6C165E591B3861F20003012E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C165E581B3861F20003012E /* AppDelegate.swift */; };
 		6C165E5D1B3861F20003012E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C165E5C1B3861F20003012E /* GameScene.swift */; };
 		6C165E5F1B3861F20003012E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C165E5E1B3861F20003012E /* GameViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04E4A14C1CA6AEF70045CE57 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
 		6C165E531B3861F20003012E /* ZombieConga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieConga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C165E571B3861F20003012E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C165E581B3861F20003012E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		6C165E561B3861F20003012E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04E4A14C1CA6AEF70045CE57 /* images */,
 				6C165E571B3861F20003012E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -159,6 +162,8 @@
 		6C165E4B1B3861F20003012E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = com.lemon;
 				TargetAttributes = {
@@ -195,6 +200,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E4A14D1CA6AEF70045CE57 /* images in Resources */,
 				6C165E671B3861F20003012E /* LaunchScreen.xib in Resources */,
 				6C165E641B3861F20003012E /* Images.xcassets in Resources */,
 				6C165E621B3861F20003012E /* Main.storyboard in Resources */,
