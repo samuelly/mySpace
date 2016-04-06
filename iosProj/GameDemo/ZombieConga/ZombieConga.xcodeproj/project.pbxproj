@@ -159,6 +159,8 @@
 		6C165E4B1B3861F20003012E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = com.lemon;
 				TargetAttributes = {
