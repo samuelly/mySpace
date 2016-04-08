@@ -435,8 +435,6 @@ http://www.hellorf.com    设计网站－low
 http://www.iconpng.com/   icon图标
 
 
-
-
 工具相关：
 sketch：
 https://twitter.com/MengTo/favorites  需翻墙
@@ -497,13 +495,14 @@ https://iosdevweekly.com   国外每周更新 内容多为这一星期里值得�
 http://www.raywenderlich.com  很多详细又全面的教程，不容错过。
 
 http://onevcat.com/#blog    oneV’s Den
+
 http://blog.devtang.com      唐巧blog
-http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
-http://tech.glowing.com/cn/
-http://blog.sunnyxx.com/2015/07/04/ios-interview/  招聘一个靠谱的 iOS   https://github.com/ChenYilong/iOSInterviewQuestions    （其他人给出答案参考：   http://www.cocoachina.com/ios/20150803/12872.html ）
 
 http://blog.ibireme.com  YYModel系列的作者
 https://github.com/ibireme
+
+http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
+http://tech.glowing.com/cn/
 
 
 编程技术：
@@ -590,6 +589,11 @@ http://casatwy.com/iosying-yong-jia-gou-tan-kai-pian.html
 
 xcode 7
 http://www.cnblogs.com/iOSv587country/p/4862989.html   使用Xcode7的Instruments检测解决iOS内存泄露
+
+about iOS interview
+http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=404843833&idx=1&sn=ac3c7fb3b8d27de4b79f227ddf4e39b7&scene=23&srcid=0407i3FAo6TU6hhKu46t2cIG#rd  
+http://blog.sunnyxx.com/2015/07/04/ios-interview/  招聘一个靠谱的 iOS   https://github.com/ChenYilong/iOSInterviewQuestions    （其他人给出答案参考：   http://www.cocoachina.com/ios/20150803/12872.html ）
+
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 7.24:
