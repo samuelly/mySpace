@@ -461,6 +461,7 @@ https://github.com/samuelly/lantern    lantern
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 swift学习
+http://www.cocoachina.com/special/swift/  swift专题页
 https://github.com/ipader/SwiftGuide     Swift语言主流学习资源
 http://zoltan.co/work/swift.html
 https://itunes.apple.com/cn/course/developing-ios-8-apps-swift/id961180099    swift stanford lesson
@@ -469,6 +470,9 @@ http://www.cocoachina.com/ios/20150906/13318.html    Swift学习: 从Objective-C
 https://github.com/apple/swift      swift开源地址
 https://swift.org/documentation/api-design-guidelines.html 
 http://swiftweekly.cn/archive.html   一个swift开发者周刊
+
+＊ http://wiki.jikexueyuan.com/project/swift/chapter1/02_a_swift_tour.html   极客学院翻译的英文版（更新很快）
+＊＊ http://www.swiftguide.cn/   国内最强，没有之一
 
 
 
