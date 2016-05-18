@@ -456,6 +456,8 @@ http://www.iterm2.com
 神级代码编辑器 Sublime Text 
 http://www.cocoachina.com/programmer/20150715/12550.html
 
+https://emacsformacosx.com/     emacs
+
 https://github.com/samuelly/lantern    lantern
 
 
