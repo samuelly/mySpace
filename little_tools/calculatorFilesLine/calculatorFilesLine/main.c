@@ -21,6 +21,7 @@ void getRunningEnvPath(char *wholeName);
 static int lineNumber = 0;
 static long totalLineNum = 0;
 static char runningPath[MAX_LENGTH];
+const char *programName = "calculatorFilesLine";
 
 int main(int argc, const char * argv[]) {
     char runningEnvWholePathName[MAX_LENGTH];
@@ -34,16 +35,15 @@ int main(int argc, const char * argv[]) {
     printf("the running program name is : %s\n",runningEnvWholePathName);
     //strcpy(basePath,"./XL");
     getRunningEnvPath(runningEnvWholePathName);
-    readFileList(runningEnvWholePathName);
+    readFileList(runningPath);
     
     return 0;
 }
 
 void getRunningEnvPath(char *wholePathName)
 {
-    const char* programName = "calculatorFilesLine";
-    int nameLength = strlen(programName);
-    int wholePathLength = strlen(wholePathName);
+    unsigned long nameLength = strlen(programName);
+    unsigned long wholePathLength = strlen(wholePathName);
     memcpy(runningPath, wholePathName, wholePathLength - nameLength);
 }
 
@@ -65,6 +65,10 @@ int readFileList(char *basePath)
         if(strcmp(ptr->d_name,".")==0 || strcmp(ptr->d_name,"..")==0)    ///current dir OR parrent dir
             continue;
         else if(ptr->d_type == 8) {   ///file
+            if (strcmp(ptr->d_name, programName) == 0) {
+                continue;
+            }
+            
             strcpy(fileWholePath, basePath);
             strcat(fileWholePath, "/");
             strcat(fileWholePath, ptr->d_name);
