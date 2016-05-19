@@ -30,10 +30,9 @@ int main(int argc, const char * argv[]) {
     memset(runningEnvWholePathName, '\0', sizeof(runningEnvWholePathName));
     memset(runningPath, '\0', sizeof(runningPath));
     
-    //getcwd(basePath, MAX_LENGTH - 1);
+    //getcwd(basePath, MAX_LENGTH - 1); 
     strcpy(runningEnvWholePathName, argv[0]);  // 从argv[]中获取运行程序时的带当前路径的名称
-    printf("the running program name is : %s\n",runningEnvWholePathName);
-    //strcpy(basePath,"./XL");
+    //printf("the running program name is : %s\n",runningEnvWholePathName);
     getRunningEnvPath(runningEnvWholePathName);
     readFileList(runningPath);
     
@@ -65,7 +64,7 @@ int readFileList(char *basePath)
         if(strcmp(ptr->d_name,".")==0 || strcmp(ptr->d_name,"..")==0)    ///current dir OR parrent dir
             continue;
         else if(ptr->d_type == 8) {   ///file
-            if (strcmp(ptr->d_name, programName) == 0) {
+            if (strcmp(ptr->d_name, programName) == 0) { // 当打开本程序文件时不计入统计
                 continue;
             }
             
@@ -73,7 +72,7 @@ int readFileList(char *basePath)
             strcat(fileWholePath, "/");
             strcat(fileWholePath, ptr->d_name);
             lineNumber = getFileLineNum(fileWholePath); //不知何原因，mac下需要传入文件的完整路径，fopen才能正确打开，光文件名不行
-            printf("d_name:%s/%s lineNum : %d\n",basePath,ptr->d_name,lineNumber);
+            printf("file name : %s/%s lineNum : %d\n",basePath,ptr->d_name,lineNumber);
         } else if(ptr->d_type == 10)    ///link file
             printf("d_name:%s/%s\n",basePath,ptr->d_name);
         else if(ptr->d_type == 4)    ///dir
@@ -87,7 +86,7 @@ int readFileList(char *basePath)
         
         totalLineNum += lineNumber;
     }
-    printf("total line number : %ld\n",totalLineNum);
+    printf("total line number in the folder is : %ld\n",totalLineNum);
     closedir(dir);
     return 1;
 }
@@ -98,7 +97,7 @@ int getFileLineNum(char *fileName)
     FILE *fp;  // 指向文件的指针
     char buffer[MAX_LENGTH];  //缓冲区，存储读取到的每行的内容
     
-    if ((fp = fopen(fileName, "rb")) == NULL) { // 以读取二进制文件方式打开
+    if ((fp = fopen(fileName, "rt+")) == NULL) { // 以读取二进制文件方式打开
         perror(fileName);
         return 0;
     }
@@ -106,6 +105,8 @@ int getFileLineNum(char *fileName)
     while (fgets(buffer, MAX_LENGTH - 1, fp)) { // 读取一行内容
         lineNum ++;
     }
+    
+    fclose(fp);
     
     return lineNum;
 }
