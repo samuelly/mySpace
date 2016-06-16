@@ -424,6 +424,7 @@ https://github.com/ReactiveCocoa/ReactiveCocoa
 https://github.com/MengTo/Spring    spring动画
 
 http://github.ibireme.com/github/list/ios/      github－ios 备忘录
+https://www.zhihu.com/question/22914651      GitHub 上都有哪些值得关注学习的 iOS 开源项目？
 http://www.cocoachina.com/ios/20150727/12720.html      27个提升效率的iOS开源库推荐
 http://www.cocoachina.com/bbs/read.php?tid=239175   快速集成下拉刷新--MJRefresh
 
@@ -601,7 +602,12 @@ about iOS interview
 http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=404843833&idx=1&sn=ac3c7fb3b8d27de4b79f227ddf4e39b7&scene=23&srcid=0407i3FAo6TU6hhKu46t2cIG#rd  
 http://blog.sunnyxx.com/2015/07/04/ios-interview/  招聘一个靠谱的 iOS   https://github.com/ChenYilong/iOSInterviewQuestions    （其他人给出答案参考：   http://www.cocoachina.com/ios/20150803/12872.html ）
 
-＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+programmer learning & for fun:
+http://www.cocoachina.com/game/20160519/16341.html     一大波能提高编程技能的游戏
+https://www.zhihu.com/question/37146954      GitHub 上有些什么好玩的项目？
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 7.24:
 // http://www.topcss.org/?cat=96
@@ -652,6 +658,10 @@ JSValue则可以说是JavaScript和Object-C之间互换的桥梁，它提供了�
 
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+工作时遇到的：
+
+小数精度：  
+http://www.cnblogs.com/denz/p/5330771.html    关于OC中的小数精确计算---NSDecimalNumber
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
@@ -730,6 +740,7 @@ http://fykec.github.io/2015/12/10/iOS-Layout%20技术回顾及Masonry介绍.html
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 others：
 http://www.miaopai.com/show/u-fOpin3o3qbeAHfGN2kFg__.htm     跑步
+
 
 english：
 http://www.zhihu.com/question/21454131  选择英文电台

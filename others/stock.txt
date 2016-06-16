@@ -13,11 +13,27 @@ mac 富途证券
 
 
 量化交易：
-
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+书籍推荐：
+中文的我的看的不多，《评投资组合的熵理论和信息价值》是本好书，作者目前也在运转一个私募。英文的可以看那些经典的量化投资论文，
+比如<The cross-section of expected stock returns>, <Pairs trading: performance of a relative-value arbitrage rule>,
+ <Does the stock market overact?>, <Value and growth investing: review and update>, etc. 
+ 我自己是研究量化投资组合选择这一块的，这方面有不少文章可以推荐，比如<A New Interpretation of Information Rate>,
+  <Optimal Gambling Systems For Favorable Games>, <Portfolio Choice and the Kelly Criterion>, etc. 
+  有本中文传记类的《财富公式》，详细讲述了这方面的历史。 希望这些有所帮助。
+  
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+相关网站：
+http://www.zhihu.com/question/22211032    学习量化交易如何入门？
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 知识掌握：
 
 概率论： 期望、线性回归
 
+统计学：决策树，森林算法
+
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 量化思想入门：《海龟交易法则》
 
 书评：
