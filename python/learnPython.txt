@@ -1,3 +1,7 @@
 learning web:
 
 https://www.dataquest.io/mission/1/python-basics
+
+https://www.codecademy.com/zh/learn/python
+
+http://learnpythonthehardway.org/book/ex1.html
