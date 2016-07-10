@@ -1,0 +1,9 @@
+terminal tips：
+
+1.say
+
+2.隐藏or显示某文件夹,eg:到文件夹abc所在目录
+  chflags hidden abc  隐藏文件夹abc
+  chflags nohidden abc 恢复显示文件夹abc
+
+3.
