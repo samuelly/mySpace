@@ -748,3 +748,6 @@ http://www.zhihu.com/question/21454131  选择英文电台
 stock：
 http://xueqiu.com/1172522226     江渚渔樵99
 http://www.guzhang.com/info/
+
+
+量化分析师的Python日记
