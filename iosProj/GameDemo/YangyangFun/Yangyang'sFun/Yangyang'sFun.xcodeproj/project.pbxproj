@@ -16,9 +16,9 @@
 		895B65811D3E675200826BC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 895B657F1D3E675200826BC3 /* LaunchScreen.storyboard */; };
 		895B658C1D3E675200826BC3 /* Yangyang_sFunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B658B1D3E675200826BC3 /* Yangyang_sFunTests.swift */; };
 		895B65971D3E675200826BC3 /* Yangyang_sFunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B65961D3E675200826BC3 /* Yangyang_sFunUITests.swift */; };
-		895B65A81D3E6D7300826BC3 /* yangyang_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 895B65A51D3E6D7300826BC3 /* yangyang_1.jpg */; };
-		895B65A91D3E6D7300826BC3 /* yangyang_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 895B65A61D3E6D7300826BC3 /* yangyang_2.jpg */; };
-		895B65AA1D3E6D7300826BC3 /* yangyang_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 895B65A71D3E6D7300826BC3 /* yangyang_3.jpg */; };
+		895B65AE1D40AED500826BC3 /* yangyang_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 895B65AB1D40AED500826BC3 /* yangyang_1.png */; };
+		895B65AF1D40AED500826BC3 /* yangyang_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 895B65AC1D40AED500826BC3 /* yangyang_2.png */; };
+		895B65B01D40AED500826BC3 /* yangyang_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 895B65AD1D40AED500826BC3 /* yangyang_3.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,9 @@
 		895B65921D3E675200826BC3 /* Yangyang'sFunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yangyang'sFunUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		895B65961D3E675200826BC3 /* Yangyang_sFunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yangyang_sFunUITests.swift; sourceTree = "<group>"; };
 		895B65981D3E675200826BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		895B65A51D3E6D7300826BC3 /* yangyang_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = yangyang_1.jpg; path = resource/yangyang_1.jpg; sourceTree = "<group>"; };
-		895B65A61D3E6D7300826BC3 /* yangyang_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = yangyang_2.jpg; path = resource/yangyang_2.jpg; sourceTree = "<group>"; };
-		895B65A71D3E6D7300826BC3 /* yangyang_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = yangyang_3.jpg; path = resource/yangyang_3.jpg; sourceTree = "<group>"; };
+		895B65AB1D40AED500826BC3 /* yangyang_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yangyang_1.png; path = resource/yangyang_1.png; sourceTree = "<group>"; };
+		895B65AC1D40AED500826BC3 /* yangyang_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yangyang_2.png; path = resource/yangyang_2.png; sourceTree = "<group>"; };
+		895B65AD1D40AED500826BC3 /* yangyang_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = yangyang_3.png; path = resource/yangyang_3.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +141,9 @@
 		895B65A41D3E6D2D00826BC3 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				895B65A51D3E6D7300826BC3 /* yangyang_1.jpg */,
-				895B65A61D3E6D7300826BC3 /* yangyang_2.jpg */,
-				895B65A71D3E6D7300826BC3 /* yangyang_3.jpg */,
+				895B65AB1D40AED500826BC3 /* yangyang_1.png */,
+				895B65AC1D40AED500826BC3 /* yangyang_2.png */,
+				895B65AD1D40AED500826BC3 /* yangyang_3.png */,
 			);
 			name = resource;
 			sourceTree = "<group>";
@@ -252,13 +252,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895B65AF1D40AED500826BC3 /* yangyang_2.png in Resources */,
 				895B65751D3E675200826BC3 /* GameScene.sks in Resources */,
 				895B65811D3E675200826BC3 /* LaunchScreen.storyboard in Resources */,
-				895B65A91D3E6D7300826BC3 /* yangyang_2.jpg in Resources */,
 				895B657E1D3E675200826BC3 /* Assets.xcassets in Resources */,
 				895B657C1D3E675200826BC3 /* Main.storyboard in Resources */,
-				895B65A81D3E6D7300826BC3 /* yangyang_1.jpg in Resources */,
-				895B65AA1D3E6D7300826BC3 /* yangyang_3.jpg in Resources */,
+				895B65AE1D40AED500826BC3 /* yangyang_1.png in Resources */,
+				895B65B01D40AED500826BC3 /* yangyang_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +514,7 @@
 				895B659D1D3E675200826BC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		895B659E1D3E675200826BC3 /* Build configuration list for PBXNativeTarget "Yangyang'sFunTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +523,7 @@
 				895B65A01D3E675200826BC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		895B65A11D3E675200826BC3 /* Build configuration list for PBXNativeTarget "Yangyang'sFunUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +532,7 @@
 				895B65A31D3E675200826BC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

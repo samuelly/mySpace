@@ -26,17 +26,11 @@ class GameScene: SKScene {
             let location = touch.locationInNode(self)
             
 //            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            var sprite = SKSpriteNode(imageNamed:"yangyang_1.jpg")
-            var pics = ["yangyang_1.jpg","yangyang_2.jpg","yangyang_3.jpg"]
-            let num = arc4random()%3
-            NSLog("num is %d",num)
-            if num == 0 {
-                sprite = SKSpriteNode(imageNamed:pics[0])
-            } else if num == 1 {
-                sprite = SKSpriteNode(imageNamed:pics[1])
-            } else if num == 2 {
-                sprite = SKSpriteNode(imageNamed:pics[2])
-            }
+            var pics = ["yangyang_1.png","yangyang_2.png","yangyang_3.png"]
+            let randomNumber:Int = Int(arc4random_uniform(UInt32(pics.count)))
+            let img:String = pics[randomNumber]
+            NSLog("num is %d, img is %s", randomNumber,img)
+            let sprite = SKSpriteNode(imageNamed:img)
             
             sprite.xScale = 0.5
             sprite.yScale = 0.5
