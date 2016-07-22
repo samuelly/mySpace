@@ -17,6 +17,10 @@ class GameScene: SKScene {
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
         self.addChild(myLabel)
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(GameScene.handlerLongPress))
+        
+        self.view?.addGestureRecognizer(longPress)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -37,10 +41,18 @@ class GameScene: SKScene {
             sprite.position = location
             
             let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-//            let time:Int = 3
             sprite.runAction(SKAction.repeatActionForever(action))
             
             self.addChild(sprite)
+        }
+    }
+    
+    func handlerLongPress() {
+        NSLog("test long press")
+        for var node in self.children {
+            if node .isKindOfClass(SKSpriteNode) {
+                node.removeFromParent()
+            }
         }
     }
    
