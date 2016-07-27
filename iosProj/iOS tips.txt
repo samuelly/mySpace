@@ -481,10 +481,14 @@ http://swiftweekly.cn/archive.html   一个swift开发者周刊
 
 
 game dev in swift
+＊＊  http://www.sprite-kit.com/tutorials/      关注spriteKit的发展动态，需要翻墙
+
 http://www.cocoachina.com/game/20150713/12528.html      SpriteKit在iOS 9和OS X 10.11中的新特性
 http://www.cocoachina.com/swift/20141219/10710.html    想开发iPhone App？来看看这个6个适合新手的项目吧
 http://www.cocoachina.com/game/20150908/13362.html    推荐：国外游戏开发者学习游戏设计的免费资源
 《2D iOS & tvOS Games by Tutorials》  新书，2015.10.28 release
+
+https://www.udemy.com/rume-academy-introduction-to-spritekit-in-swift/
 
 
 http://www.cocoachina.com/game/20150906/13340.html  独立游戏人：像素风格游戏制作分享（很不错的像素绘画教程）
