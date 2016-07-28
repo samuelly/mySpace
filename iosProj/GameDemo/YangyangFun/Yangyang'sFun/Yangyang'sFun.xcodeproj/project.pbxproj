@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8941D2CB1D4A1D450029B80E /* MainMenu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8941D2CA1D4A1D450029B80E /* MainMenu.jpg */; };
 		895B65731D3E675200826BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B65721D3E675200826BC3 /* AppDelegate.swift */; };
 		895B65751D3E675200826BC3 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 895B65741D3E675200826BC3 /* GameScene.sks */; };
 		895B65771D3E675200826BC3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895B65761D3E675200826BC3 /* GameScene.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8941D2CA1D4A1D450029B80E /* MainMenu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MainMenu.jpg; path = resource/MainMenu.jpg; sourceTree = "<group>"; };
 		895B656F1D3E675200826BC3 /* Yangyang'sFun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yangyang'sFun.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		895B65721D3E675200826BC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		895B65741D3E675200826BC3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		895B65A41D3E6D2D00826BC3 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				8941D2CA1D4A1D450029B80E /* MainMenu.jpg */,
 				895B65AB1D40AED500826BC3 /* yangyang_1.png */,
 				895B65AC1D40AED500826BC3 /* yangyang_2.png */,
 				895B65AD1D40AED500826BC3 /* yangyang_3.png */,
@@ -257,6 +260,7 @@
 				895B65811D3E675200826BC3 /* LaunchScreen.storyboard in Resources */,
 				895B657E1D3E675200826BC3 /* Assets.xcassets in Resources */,
 				895B657C1D3E675200826BC3 /* Main.storyboard in Resources */,
+				8941D2CB1D4A1D450029B80E /* MainMenu.jpg in Resources */,
 				895B65AE1D40AED500826BC3 /* yangyang_1.png in Resources */,
 				895B65B01D40AED500826BC3 /* yangyang_3.png in Resources */,
 			);

@@ -16,7 +16,22 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainMenu.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="QXS-In-m9c">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QXS-In-m9c" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="1fk-rT-5oJ"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="QXS-In-m9c" secondAttribute="bottom" id="4hH-Pb-OJZ"/>
+                            <constraint firstItem="QXS-In-m9c" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="777-2z-BsZ"/>
+                            <constraint firstAttribute="trailing" secondItem="QXS-In-m9c" secondAttribute="trailing" id="AHp-1y-yCT"/>
+                            <constraint firstItem="QXS-In-m9c" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="QWj-Ru-UbD"/>
+                            <constraint firstItem="QXS-In-m9c" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="heg-sk-4jd"/>
+                            <constraint firstAttribute="trailing" secondItem="QXS-In-m9c" secondAttribute="trailing" id="uKS-vR-WIe"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="QXS-In-m9c" secondAttribute="bottom" id="yWy-tB-lzR"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +39,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MainMenu.jpg" width="1347" height="1621"/>
+    </resources>
 </document>

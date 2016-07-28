@@ -15,11 +15,9 @@ class GameScene: SKScene {
         myLabel.text = "洋洋好～"
         myLabel.fontSize = 45
         myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
-        
         self.addChild(myLabel)
         
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(GameScene.handlerLongPress))
-        
         self.view?.addGestureRecognizer(longPress)
     }
     
