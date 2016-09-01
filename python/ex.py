@@ -1,3 +1,5 @@
+
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 '''
@@ -63,7 +65,7 @@ print "We have", passengers, "to carpool today."
 print "We need to put about", average_passengers_per_car, "in each car."
 '''
 
-
+'''
 # excise 5 More Variables and Printing
 my_name = 'Zed A. Shaw'
 my_age = 35 # not a lie
@@ -84,9 +86,32 @@ print "His teeth are usually %s depending on the coffee." % my_teeth
 print "If I add %d, %d, and %d I get %d." % (
     my_age, my_height, my_weight, my_age + my_height + my_weight)
 
+'''
 
 
+'''
+# excise  liaoxuefeng
+name = raw_input('plesae enter your name :')
+print 'hello ,' , name
+'''
 
+'''
+temp = ['hello', 'world', 'and', 'you']
+print'temp %s' % temp
+print temp[0], temp[-1] 
+'''
+
+# excise define function
+def my_abs(x):
+	if not isinstance(x, (int, float)):
+		raise TypeError('bad operand type')
+	
+	if x >= 0:
+		return x
+	else:
+		return -x
+		
+print my_abs('a')
 
 
 
