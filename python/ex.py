@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -101,6 +100,7 @@ print'temp %s' % temp
 print temp[0], temp[-1] 
 '''
 
+'''
 # excise define function
 def my_abs(x):
 	if not isinstance(x, (int, float)):
@@ -111,9 +111,44 @@ def my_abs(x):
 	else:
 		return -x
 		
-print my_abs('a')
+#print my_abs('a')
+
+# 计算x的n次方
+def power(x,n = 2):
+	s = 1
+	while n > 0:
+		n = n - 1
+		s = s * x
+	return s
+
+print power(5,3)
+'''
+
+from Tkinter import *
+
+import tkMessageBox
+
+class Application(Frame):
+    def __init__(self, master=None):
+        Frame.__init__(self, master)
+        self.pack()
+        self.createWidgets()
+
+    def createWidgets(self):
+        self.nameInput = Entry(self)
+        self.nameInput.pack()
+        self.alertButton = Button(self, text='Hello', command=self.hello)
+        self.alertButton.pack()
+
+    def hello(self):
+        name = self.nameInput.get() or 'world'
+        tkMessageBox.showinfo('Message', 'Hello, %s' % name)
 
 
-
+app = Application()
+# 设置窗口标题:
+app.master.title('Hello World')
+# 主消息循环:
+app.mainloop()
 
 
