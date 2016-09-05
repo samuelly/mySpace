@@ -124,6 +124,14 @@ def power(x,n = 2):
 print power(5,3)
 '''
 
+
+
+
+
+
+
+'''
+# 图形界面
 from Tkinter import *
 
 import tkMessageBox
@@ -150,5 +158,5 @@ app = Application()
 app.master.title('Hello World')
 # 主消息循环:
 app.mainloop()
-
+'''
 
