@@ -463,12 +463,6 @@ https://emacsformacosx.com/     emacs
 https://github.com/samuelly/lantern    lantern
 
 
-
-
-
-面试相关：
-https://www.evernote.com/shard/s576/sh/7e58b450-1abe-43a8-bf82-fbf07f1db13c/049802174415b418a2e65f75b744ab72   很不错的帖子
-
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 swift学习
 http://www.cocoachina.com/special/swift/  swift专题页
@@ -620,6 +614,9 @@ http://www.cnblogs.com/iOSv587country/p/4862989.html   使用Xcode7的Instrument
 about iOS interview
 http://mp.weixin.qq.com/s?__biz=MjM5OTM0MzIwMQ==&mid=404843833&idx=1&sn=ac3c7fb3b8d27de4b79f227ddf4e39b7&scene=23&srcid=0407i3FAo6TU6hhKu46t2cIG#rd  
 http://blog.sunnyxx.com/2015/07/04/ios-interview/  招聘一个靠谱的 iOS   https://github.com/ChenYilong/iOSInterviewQuestions    （其他人给出答案参考：   http://www.cocoachina.com/ios/20150803/12872.html ）
+面试相关：
+https://www.evernote.com/shard/s576/sh/7e58b450-1abe-43a8-bf82-fbf07f1db13c/049802174415b418a2e65f75b744ab72   很不错的帖子
+http://www.zhihu.com/question/19604641  知乎帖子
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 programmer learning & for fun:
@@ -685,6 +682,10 @@ http://www.cnblogs.com/denz/p/5330771.html    关于OC中的小数精确计算--
 UIBezierPath 的用法
 
 ios-charts:
+https://github.com/danielgindi/Charts
+http://hao.jobbole.com/ios-charts/
+http://www.cnblogs.com/oneapm/p/4741582.html
+https://elibing.com/projects/ios-charts/    重点参考
 
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
