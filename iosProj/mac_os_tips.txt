@@ -1,9 +1,22 @@
-terminal tips：
+1.terminal tips：
 
-1.say
+1）say  (很有趣哦)
 
-2.隐藏or显示某文件夹,eg:到文件夹abc所在目录
+2）隐藏or显示某文件夹,eg:到文件夹abc所在目录
   chflags hidden abc  隐藏文件夹abc
   chflags nohidden abc 恢复显示文件夹abc
 
-3.
+3） 如何获得当前文件夹的路径地址？
+way 1: 打开终端，输入下面的命令：
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES
+就能在文件夹顶部看见完整的地址了
+
+way 2: 直接把文件夹拖进terminal即可
+
+
+
+2.截图：
+1） Command＋shift＋3   全屏截图
+2） Command＋shift＋4   鼠标选定区域截图
+
+

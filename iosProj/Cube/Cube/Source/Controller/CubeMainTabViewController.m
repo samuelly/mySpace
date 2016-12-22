@@ -30,6 +30,7 @@
     UIViewController *vc1 = [[UIViewController alloc] init];
     vc1.title = @"左边";
     vc1.view.backgroundColor = [UIColor orangeColor];
+    UINavigationController *naVC = [[UINavigationController alloc] initWithRootViewController:vc1];
     
     UIViewController *vc2 = [[UIViewController alloc] init];
     vc2.title = @"中间";
@@ -39,11 +40,15 @@
     vc3.title = @"右边";
     vc3.view.backgroundColor = [UIColor greenColor];
     
-    self.viewControllers = @[vc1,vc2,vc3];
+    self.viewControllers = @[naVC,vc2,vc3];
     
     self.selectedIndex = 2;
     
-    self.navigationController.navigationBar.hidden = YES;
+//    self.navigationController.navigationBar.hidden = YES;
+    
+    UITabBar *tabBar = self.tabBar;
+    tabBar.barStyle = UIBarStyleDefault;
+//    tabBar.barTintColor = [UIColor yellowColor];
 }
 
 - (void)didReceiveMemoryWarning {
