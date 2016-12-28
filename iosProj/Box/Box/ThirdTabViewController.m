@@ -11,6 +11,8 @@
 #import "UIApplication+Delegate.h"
 #import "SwipeableCellVC.h"
 #import "CollectionViewController.h"
+#import "DynamicHeightCellVC.h"
+
 
 @interface ThirdTabViewController () <UITableViewDelegate,UITableViewDataSource> 
 
@@ -95,7 +97,8 @@
 
 - (void)goDynamicHeightTableView
 {
-    
+    DynamicHeightCellVC *dynamicHeightCellVC = [[DynamicHeightCellVC alloc] init];
+    [self.navigationController pushViewController:dynamicHeightCellVC animated:YES];
 }
 
 #pragma -- table view delegate & data source

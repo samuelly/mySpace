@@ -60,6 +60,7 @@
 		894A458D1E136E140065BB30 /* NSString+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 894A458A1E136E140065BB30 /* NSString+Utilities.m */; };
 		894A458E1E136E140065BB30 /* UIApplication+Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 894A458C1E136E140065BB30 /* UIApplication+Delegate.m */; };
 		894A45921E136F1A0065BB30 /* DynamicHeightCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 894A45911E136F1A0065BB30 /* DynamicHeightCellVC.m */; };
+		894A45951E13959E0065BB30 /* DynamicHeightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 894A45941E13959E0065BB30 /* DynamicHeightCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,8 @@
 		894A458C1E136E140065BB30 /* UIApplication+Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+Delegate.m"; path = "categories/UIApplication+Delegate.m"; sourceTree = "<group>"; };
 		894A45901E136F1A0065BB30 /* DynamicHeightCellVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicHeightCellVC.h; path = Features/DynamicHeightCell/DynamicHeightCellVC.h; sourceTree = "<group>"; };
 		894A45911E136F1A0065BB30 /* DynamicHeightCellVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DynamicHeightCellVC.m; path = Features/DynamicHeightCell/DynamicHeightCellVC.m; sourceTree = "<group>"; };
+		894A45931E13959E0065BB30 /* DynamicHeightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicHeightCell.h; path = Features/DynamicHeightCell/DynamicHeightCell.h; sourceTree = "<group>"; };
+		894A45941E13959E0065BB30 /* DynamicHeightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DynamicHeightCell.m; path = Features/DynamicHeightCell/DynamicHeightCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +385,8 @@
 			children = (
 				894A45901E136F1A0065BB30 /* DynamicHeightCellVC.h */,
 				894A45911E136F1A0065BB30 /* DynamicHeightCellVC.m */,
+				894A45931E13959E0065BB30 /* DynamicHeightCell.h */,
+				894A45941E13959E0065BB30 /* DynamicHeightCell.m */,
 			);
 			name = DynamicHeightCell;
 			sourceTree = "<group>";
@@ -564,6 +569,7 @@
 				894A45711E136CEE0065BB30 /* Footer.m in Sources */,
 				892241D619E7892C00AF866A /* SecondTabViewController.m in Sources */,
 				892241DC19E90E7A00AF866A /* ThirdTabViewController.m in Sources */,
+				894A45951E13959E0065BB30 /* DynamicHeightCell.m in Sources */,
 				894A45451E1368EE0065BB30 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				892241D019E7878500AF866A /* MainViewController.m in Sources */,
 				894A45421E1368EE0065BB30 /* AFAutoPurgingImageCache.m in Sources */,
