@@ -18,6 +18,7 @@
 
 @implementation ThirdTabViewController {
     NSArray *tableData;
+    UIButton *_dynamicHeightCell;
 }
 
 //- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -69,6 +70,15 @@
     
     [_swipeCellBtn addTarget:self action:@selector(onSwipeCellBtnPressed:) forControlEvents:UIControlEventTouchUpInside];
     [_swipeCellBtn.layer setCornerRadius:4.0];
+    
+    _dynamicHeightCell = [UIButton buttonWithType:UIButtonTypeCustom];
+    _dynamicHeightCell.frame = CGRectMake(_sendMsgBtn.frame.origin.x, _sendMsgBtn.frame.origin.y + _sendMsgBtn.frame.size.height + 16, _sendMsgBtn.frame.size.width, _sendMsgBtn.frame.size.height);
+    [_dynamicHeightCell setBackgroundColor:[UIColor orangeColor]];
+    [_dynamicHeightCell.titleLabel setTextColor:[UIColor blackColor]];
+    [_dynamicHeightCell setTitle:@"dynamicHeight" forState:UIControlStateNormal];
+    [_dynamicHeightCell.titleLabel setFont:kAppFont(14)];
+    [self.view addSubview:_dynamicHeightCell];
+    [_dynamicHeightCell addTarget:self action:@selector(goDynamicHeightTableView) forControlEvents:UIControlEventTouchUpInside];
 }
 
 
@@ -83,10 +93,12 @@
     [self.navigationController pushViewController:swipeableCellView animated:YES];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)goDynamicHeightTableView
+{
+    
 }
+
+#pragma -- table view delegate & data source
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
