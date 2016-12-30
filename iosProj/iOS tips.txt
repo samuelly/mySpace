@@ -688,6 +688,8 @@ http://www.cnblogs.com/oneapm/p/4741582.html
 https://elibing.com/projects/ios-charts/    重点参考
 
 
+ios 9之后网络请求必须支持https，在info.plist文件添加AppTransportSecurity ，Bool类型＝ yes
+
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 蓝灯：
@@ -778,4 +780,9 @@ http://xueqiu.com/1172522226     江渚渔樵99
 http://www.guzhang.com/info/
 
 
-量化分析师的Python日记
+
+
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+a38f44fd94b0d3a034074c813f550cb15e9f50ef   aqi token
+http://aqicn.org/json-api/doc/

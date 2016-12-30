@@ -9,6 +9,9 @@
 #import "DynamicHeightCellVC.h"
 #import "DynamicHeightCell.h"
 
+#import "AFHTTPSessionManager.h"
+
+
 @interface DynamicHeightCellVC ()
 
 @end
@@ -22,6 +25,7 @@
     [super viewDidLoad];
     
     [self setupUI];
+    [self requestData];
     
 //    self.refreshControl = [[UIRefreshControl alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableView.frame.size.width, 100.0f)];
 //    [self.refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
@@ -50,6 +54,26 @@
                   \
                   “People relate to aspects of my stories and that’s nice for me because then I’m not all alone with it,” she said. “Also, I do believe you’re only as sick as your secrets. If that’s true, I’m just really healthy.”",
                  ];
+}
+
+- (void)requestData
+{
+    NSString *token = @"a38f44fd94b0d3a034074c813f550cb15e9f50ef";
+    NSString *location = [NSString stringWithFormat:@"https://api.waqi.info/feed/here/?token=%@",token];
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    
+    NSURL *URL = [NSURL URLWithString:location];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"%@ %@", response, responseObject);
+        }
+    }];
+    [dataTask resume];
 }
 
 
