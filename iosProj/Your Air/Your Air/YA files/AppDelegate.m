@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YAHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,7 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    YAHomeViewController *homeVC = [[YAHomeViewController alloc] init];
+    self.window.rootViewController = homeVC;
     return YES;
 }
 
