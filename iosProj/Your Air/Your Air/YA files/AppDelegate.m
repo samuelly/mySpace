@@ -21,7 +21,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     YAHomeViewController *homeVC = [[YAHomeViewController alloc] init];
-    self.window.rootViewController = homeVC;
+    self.navController = [[UINavigationController alloc] initWithRootViewController:homeVC];
+    self.window.rootViewController = self.navController;
     return YES;
 }
 

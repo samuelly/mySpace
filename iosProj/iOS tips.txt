@@ -435,6 +435,7 @@ http://cubic-bezier.com/#.09,-0.28,.83,.84
 https://unsplash.com      设计网站
 http://www.hellorf.com    设计网站－low
 http://www.iconpng.com/   icon图标
+http://www.uishe.cn/plus/list.php?tid=3  UI about
 
 
 工具相关：
@@ -689,6 +690,10 @@ https://elibing.com/projects/ios-charts/    重点参考
 
 
 ios 9之后网络请求必须支持https，在info.plist文件添加AppTransportSecurity ，Bool类型＝ yes
+
+
+xcode调试相关：
+po [[self view] recursiveDescription]; 
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 

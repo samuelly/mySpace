@@ -13,6 +13,7 @@
 		894A45BF1E1B92060065BB30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 894A45BE1E1B92060065BB30 /* AppDelegate.m */; };
 		894A45C31E1B92780065BB30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 894A45C11E1B92780065BB30 /* main.m */; };
 		894A45C71E1B970B0065BB30 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 894A45C61E1B970B0065BB30 /* Info.plist */; };
+		89B126CA1E24EB5500A3B326 /* YASettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B126C91E24EB5500A3B326 /* YASettingsViewController.m */; };
 		89B72B701E2386D4007A8E85 /* YAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B72B6F1E2386D4007A8E85 /* YAHomeViewController.m */; };
 		89B72B801E2395CF007A8E85 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B72B741E2395CF007A8E85 /* AFHTTPSessionManager.m */; };
 		89B72B811E2395CF007A8E85 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B72B771E2395CF007A8E85 /* AFNetworkReachabilityManager.m */; };
@@ -40,6 +41,10 @@
 		894A45BE1E1B92060065BB30 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "YA files/AppDelegate.m"; sourceTree = "<group>"; };
 		894A45C11E1B92780065BB30 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "YA files/Supporting Files/main.m"; sourceTree = "<group>"; };
 		894A45C61E1B970B0065BB30 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B126C61E2484A000A3B326 /* YAConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = YAConstants.h; path = "YA files/Constant/YAConstants.h"; sourceTree = "<group>"; };
+		89B126C71E24927400A3B326 /* YA.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YA.pch; sourceTree = "<group>"; };
+		89B126C81E24EB5500A3B326 /* YASettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YASettingsViewController.h; path = "YA files/source/YASettingsViewController.h"; sourceTree = "<group>"; };
+		89B126C91E24EB5500A3B326 /* YASettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YASettingsViewController.m; path = "YA files/source/YASettingsViewController.m"; sourceTree = "<group>"; };
 		89B72B6E1E2386D4007A8E85 /* YAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAHomeViewController.h; path = "YA files/source/YAHomeViewController.h"; sourceTree = "<group>"; };
 		89B72B6F1E2386D4007A8E85 /* YAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAHomeViewController.m; path = "YA files/source/YAHomeViewController.m"; sourceTree = "<group>"; };
 		89B72B731E2395CF007A8E85 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = ThirdSupport/AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 			children = (
 				894A45C61E1B970B0065BB30 /* Info.plist */,
 				894A45C11E1B92780065BB30 /* main.m */,
+				89B126C71E24927400A3B326 /* YA.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 			children = (
 				89B72B6E1E2386D4007A8E85 /* YAHomeViewController.h */,
 				89B72B6F1E2386D4007A8E85 /* YAHomeViewController.m */,
+				89B126C81E24EB5500A3B326 /* YASettingsViewController.h */,
+				89B126C91E24EB5500A3B326 /* YASettingsViewController.m */,
 			);
 			name = source;
 			sourceTree = "<group>";
@@ -205,6 +213,7 @@
 		89B72BA41E239835007A8E85 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
+				89B126C61E2484A000A3B326 /* YAConstants.h */,
 			);
 			name = Constant;
 			sourceTree = "<group>";
@@ -293,6 +302,7 @@
 				89B72BA21E2395F5007A8E85 /* UIRefreshControl+AFNetworking.m in Sources */,
 				894A45BF1E1B92060065BB30 /* AppDelegate.m in Sources */,
 				89B72B9B1E2395F5007A8E85 /* AFAutoPurgingImageCache.m in Sources */,
+				89B126CA1E24EB5500A3B326 /* YASettingsViewController.m in Sources */,
 				89B72B821E2395CF007A8E85 /* AFSecurityPolicy.m in Sources */,
 				89B72B831E2395CF007A8E85 /* AFURLRequestSerialization.m in Sources */,
 				89B72B9D1E2395F5007A8E85 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -422,6 +432,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SFWLXFZC2V;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Your Air/YA.pch";
 				INFOPLIST_FILE = "Your Air/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -435,6 +447,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SFWLXFZC2V;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Your Air/YA.pch";
 				INFOPLIST_FILE = "Your Air/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

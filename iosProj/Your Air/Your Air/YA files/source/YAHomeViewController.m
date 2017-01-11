@@ -8,6 +8,8 @@
 
 #import "YAHomeViewController.h"
 #import "AFHTTPSessionManager.h"
+#import "YASettingsViewController.h"
+
 
 @interface YAHomeViewController ()
 
@@ -20,14 +22,28 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor yellowColor];
+    self.title = @"Your Air";
+    
+    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftBtn.backgroundColor=[UIColor orangeColor];
+    leftBtn.frame=CGRectMake(0, 0, 30, 30);
+    //    [leftBtn setTitle:@"JUMP TO SECOND" forState:UIControlStateNormal];
+    [leftBtn addTarget:self action:@selector(jumpToSetting) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    self.navigationItem.leftBarButtonItem = leftItem;
     
     [self requestData];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+
 }
 
 - (void)requestData
 {
-    NSString *token = @"a38f44fd94b0d3a034074c813f550cb15e9f50ef";
-    NSString *location = [NSString stringWithFormat:@"https://api.waqi.info/feed/here/?token=%@",token];
+    NSString *location = [NSString stringWithFormat:@"https://api.waqi.info/feed/here/?token=%@",kUserToken];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
@@ -43,6 +59,18 @@
     }];
     [dataTask resume];
 }
+
+#pragma mark - ****************************click events****************************
+- (void)jumpToSetting
+{
+    YASettingsViewController *settingVC = [[YASettingsViewController alloc] init];
+    CATransition *animation = [CATransition animation];
+    animation.type = @"oglFlip";
+    animation.subtype = @"fromLeft";
+    [self.navigationController.view.layer addAnimation:animation forKey:nil];
+    [self.navigationController pushViewController:settingVC animated:NO];
+}
+
 
 
 - (void)didReceiveMemoryWarning {
