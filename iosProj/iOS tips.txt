@@ -364,6 +364,19 @@ id deepMutableCopyArray = [array test_deepMutableCopy];
         
 demo及原帖：http://www.cocoachina.com/bbs/read.php?tid-323045-page-1.html
 
+
+30. 打印对象的方法列表 （利用runtime提供的方法）
+- (void)printMethods
+{
+    unsigned int count = 0;
+    Method *methods = class_copyMethodList([self class], &count);
+    
+    for (unsigned int i = 0; i < count; ++i) {
+        SEL sel = method_getName(methods[i]);
+        const char *name = sel_getName(sel);
+        printf("%s\n", name);
+    }
+}
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 
