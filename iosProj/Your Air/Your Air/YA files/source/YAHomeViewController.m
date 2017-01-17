@@ -10,6 +10,8 @@
 #import "AFHTTPSessionManager.h"
 #import "YASettingsViewController.h"
 
+#import "YYModel.h"
+#import "YAAqicnDataModel.h"
 
 @interface YAHomeViewController ()
 
@@ -54,6 +56,8 @@
         if (error) {
             NSLog(@"Error: %@", error);
         } else {
+            aqicnModel *model = [aqicnModel yy_modelWithJSON:responseObject];
+            NSLog(@"the url is %@",[model.data.iaqi.pm25 objectForKey:@"v"]);
             NSLog(@"%@ %@", response, responseObject);
         }
     }];
@@ -70,8 +74,6 @@
     [self.navigationController.view.layer addAnimation:animation forKey:nil];
     [self.navigationController pushViewController:settingVC animated:NO];
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

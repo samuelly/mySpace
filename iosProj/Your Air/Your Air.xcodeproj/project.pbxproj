@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8942794A1E2C978C007AFA8E /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 894279461E2C978C007AFA8E /* NSObject+YYModel.m */; };
+		8942794B1E2C978C007AFA8E /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 894279481E2C978C007AFA8E /* YYClassInfo.m */; };
+		8942794F1E2CCD7B007AFA8E /* YAAqicnDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8942794E1E2CCD7B007AFA8E /* YAAqicnDataModel.m */; };
 		894A45AD1E1B85400065BB30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894A45AB1E1B85400065BB30 /* Main.storyboard */; };
 		894A45AF1E1B85400065BB30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894A45AE1E1B85400065BB30 /* Assets.xcassets */; };
 		894A45B21E1B85400065BB30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894A45B01E1B85400065BB30 /* LaunchScreen.storyboard */; };
@@ -33,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		894279451E2C978C007AFA8E /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYModel.h"; path = "ThirdSupport/YYModel/NSObject+YYModel.h"; sourceTree = "<group>"; };
+		894279461E2C978C007AFA8E /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYModel.m"; path = "ThirdSupport/YYModel/NSObject+YYModel.m"; sourceTree = "<group>"; };
+		894279471E2C978C007AFA8E /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYClassInfo.h; path = ThirdSupport/YYModel/YYClassInfo.h; sourceTree = "<group>"; };
+		894279481E2C978C007AFA8E /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YYClassInfo.m; path = ThirdSupport/YYModel/YYClassInfo.m; sourceTree = "<group>"; };
+		894279491E2C978C007AFA8E /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYModel.h; path = ThirdSupport/YYModel/YYModel.h; sourceTree = "<group>"; };
+		8942794D1E2CCD7B007AFA8E /* YAAqicnDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YAAqicnDataModel.h; path = "YA files/source/Model/YAAqicnDataModel.h"; sourceTree = "<group>"; };
+		8942794E1E2CCD7B007AFA8E /* YAAqicnDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YAAqicnDataModel.m; path = "YA files/source/Model/YAAqicnDataModel.m"; sourceTree = "<group>"; };
 		894A459F1E1B85400065BB30 /* Your Air.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Your Air.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		894A45AC1E1B85400065BB30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		894A45AE1E1B85400065BB30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Your Air/Assets.xcassets"; sourceTree = "<group>"; };
@@ -93,6 +103,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		894279421E2C975D007AFA8E /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				894279451E2C978C007AFA8E /* NSObject+YYModel.h */,
+				894279461E2C978C007AFA8E /* NSObject+YYModel.m */,
+				894279471E2C978C007AFA8E /* YYClassInfo.h */,
+				894279481E2C978C007AFA8E /* YYClassInfo.m */,
+				894279491E2C978C007AFA8E /* YYModel.h */,
+			);
+			name = YYModel;
+			sourceTree = "<group>";
+		};
+		8942794C1E2CCB4F007AFA8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8942794D1E2CCD7B007AFA8E /* YAAqicnDataModel.h */,
+				8942794E1E2CCD7B007AFA8E /* YAAqicnDataModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		894A45961E1B853F0065BB30 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +181,7 @@
 				89B72B6F1E2386D4007A8E85 /* YAHomeViewController.m */,
 				89B126C81E24EB5500A3B326 /* YASettingsViewController.h */,
 				89B126C91E24EB5500A3B326 /* YASettingsViewController.m */,
+				8942794C1E2CCB4F007AFA8E /* Model */,
 			);
 			name = source;
 			sourceTree = "<group>";
@@ -157,6 +189,7 @@
 		89B72B711E238AE2007A8E85 /* ThirdSupport */ = {
 			isa = PBXGroup;
 			children = (
+				894279421E2C975D007AFA8E /* YYModel */,
 				89B72B721E238AF6007A8E85 /* AFNetworking */,
 			);
 			name = ThirdSupport;
@@ -297,12 +330,15 @@
 				89B72BA01E2395F5007A8E85 /* UIImageView+AFNetworking.m in Sources */,
 				894A45C31E1B92780065BB30 /* main.m in Sources */,
 				89B72B9F1E2395F5007A8E85 /* UIButton+AFNetworking.m in Sources */,
+				8942794F1E2CCD7B007AFA8E /* YAAqicnDataModel.m in Sources */,
 				89B72B701E2386D4007A8E85 /* YAHomeViewController.m in Sources */,
 				89B72B811E2395CF007A8E85 /* AFNetworkReachabilityManager.m in Sources */,
 				89B72BA21E2395F5007A8E85 /* UIRefreshControl+AFNetworking.m in Sources */,
 				894A45BF1E1B92060065BB30 /* AppDelegate.m in Sources */,
 				89B72B9B1E2395F5007A8E85 /* AFAutoPurgingImageCache.m in Sources */,
+				8942794A1E2C978C007AFA8E /* NSObject+YYModel.m in Sources */,
 				89B126CA1E24EB5500A3B326 /* YASettingsViewController.m in Sources */,
+				8942794B1E2C978C007AFA8E /* YYClassInfo.m in Sources */,
 				89B72B821E2395CF007A8E85 /* AFSecurityPolicy.m in Sources */,
 				89B72B831E2395CF007A8E85 /* AFURLRequestSerialization.m in Sources */,
 				89B72B9D1E2395F5007A8E85 /* AFNetworkActivityIndicatorManager.m in Sources */,
