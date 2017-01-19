@@ -23,14 +23,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = kDefaultViewBackgroundColor;
     self.title = @"Your Air";
     
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     leftBtn.backgroundColor=[UIColor orangeColor];
     leftBtn.frame=CGRectMake(0, 0, 30, 30);
     //    [leftBtn setTitle:@"JUMP TO SECOND" forState:UIControlStateNormal];
-    [leftBtn addTarget:self action:@selector(jumpToSetting) forControlEvents:UIControlEventTouchUpInside];
+    [leftBtn addTarget:self action:@selector(goSetting) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = leftItem;
     
@@ -45,27 +45,22 @@
 
 - (void)requestData
 {
-    NSString *location = [NSString stringWithFormat:@"https://api.waqi.info/feed/here/?token=%@",kUserToken];
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    NSString *url = [NSString stringWithFormat:@"https://api.waqi.info/feed/here/?token=%@",kUserToken];
     
-    NSURL *URL = [NSURL URLWithString:location];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-    
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
-        if (error) {
-            NSLog(@"Error: %@", error);
-        } else {
+    [[YANetworkingHandler sharedInstance] post:url parameters:nil onSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+        if (responseObject) {
             aqicnModel *model = [aqicnModel yy_modelWithJSON:responseObject];
             NSLog(@"the url is %@",[model.data.iaqi.pm25 objectForKey:@"v"]);
-            NSLog(@"%@ %@", response, responseObject);
+            NSLog(@"%@", responseObject);
+            self.title = [NSString stringWithFormat:@"PM2.5 : %d",[model.data.aqi intValue]];
         }
+    } onFailure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"request failure");
     }];
-    [dataTask resume];
 }
 
 #pragma mark - ****************************click events****************************
-- (void)jumpToSetting
+- (void)goSetting
 {
     YASettingsViewController *settingVC = [[YASettingsViewController alloc] init];
     CATransition *animation = [CATransition animation];
@@ -74,11 +69,5 @@
     [self.navigationController.view.layer addAnimation:animation forKey:nil];
     [self.navigationController pushViewController:settingVC animated:NO];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

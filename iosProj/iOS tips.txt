@@ -708,6 +708,14 @@ ios 9之后网络请求必须支持https，在info.plist文件添加AppTransport
 xcode调试相关：
 po [[self view] recursiveDescription]; 
 
+
+问题：
+
+@interface YYWeiboPictureMetadata : NSObject <NSCoding, NSCopying>
+<NSCoding, NSCopying>    why？
+
+dispatch_sync 等一系列GCD
+
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 蓝灯：
@@ -799,7 +807,9 @@ http://www.guzhang.com/info/
 
 
 
-
+yys
+link1226@126.com
+Sale123
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 a38f44fd94b0d3a034074c813f550cb15e9f50ef   aqi token

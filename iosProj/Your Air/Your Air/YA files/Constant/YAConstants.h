@@ -24,6 +24,9 @@
 #define kAirPollutionVeryUnhealthy      kRGB(98.0, 17.0, 152.0)   // 201-300
 #define kAirPollutionHazardous          kRGB(119.0, 1.0, 37.0)    // 300+
 
+#define kDefaultViewBackgroundColor     kRGB(241, 241, 241)
+
+
 
 #define kUserToken @"a38f44fd94b0d3a034074c813f550cb15e9f50ef"
 

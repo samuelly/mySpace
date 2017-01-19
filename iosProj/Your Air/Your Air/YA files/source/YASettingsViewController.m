@@ -23,7 +23,7 @@
     self.navigationItem.rightBarButtonItem = backBtn;
     
     self.title = @"Setting";
-    self.view.backgroundColor = [UIColor purpleColor];
+    self.view.backgroundColor = kDefaultViewBackgroundColor;
 }
 
 - (void)viewWillAppear:(BOOL)animated
