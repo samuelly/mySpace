@@ -13,12 +13,16 @@
 #import "YYModel.h"
 #import "YAAqicnDataModel.h"
 
-@interface YAHomeViewController ()
+@interface YAHomeViewController () <UIScrollViewDelegate>
 
 @end
 
 @implementation YAHomeViewController
+{
+    UIScrollView *_mainScrollView;
+}
 
+#pragma mark - **************************** Life Cycle ****************************
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -29,12 +33,13 @@
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     leftBtn.backgroundColor=[UIColor orangeColor];
     leftBtn.frame=CGRectMake(0, 0, 30, 30);
-    //    [leftBtn setTitle:@"JUMP TO SECOND" forState:UIControlStateNormal];
     [leftBtn addTarget:self action:@selector(goSetting) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
     self.navigationItem.leftBarButtonItem = leftItem;
     
     [self requestData];
+    
+    [self setupUI];
     
 }
 
@@ -43,6 +48,18 @@
 
 }
 
+#pragma mark - **************************** UI Layout ****************************
+- (void)setupUI
+{
+    _mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 300)];
+    _mainScrollView.delegate = self;
+    [_mainScrollView setContentSize:CGSizeMake(self.view.width, 300 + 100)];
+    [_mainScrollView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
+    _mainScrollView.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:_mainScrollView];
+}
+
+#pragma mark - **************************** Request Data ****************************
 - (void)requestData
 {
     NSString *url = [NSString stringWithFormat:@"https://api.waqi.info/feed/here/?token=%@",kUserToken];
@@ -59,7 +76,7 @@
     }];
 }
 
-#pragma mark - ****************************click events****************************
+#pragma mark - **************************** Click Events ****************************
 - (void)goSetting
 {
     YASettingsViewController *settingVC = [[YASettingsViewController alloc] init];

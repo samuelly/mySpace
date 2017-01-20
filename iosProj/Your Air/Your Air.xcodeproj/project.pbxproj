@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		892C6B621E30CBC700B39B8C /* YANetworkingHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C6B611E30CBC700B39B8C /* YANetworkingHandler.m */; };
+		892C6B661E31FAC500B39B8C /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 892C6B651E31FAC500B39B8C /* UIView+Extension.m */; };
 		8942794A1E2C978C007AFA8E /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 894279461E2C978C007AFA8E /* NSObject+YYModel.m */; };
 		8942794B1E2C978C007AFA8E /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 894279481E2C978C007AFA8E /* YYClassInfo.m */; };
 		8942794F1E2CCD7B007AFA8E /* YAAqicnDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8942794E1E2CCD7B007AFA8E /* YAAqicnDataModel.m */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		892C6B601E30CBC700B39B8C /* YANetworkingHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YANetworkingHandler.h; path = "YA files/source/handler/networking/YANetworkingHandler.h"; sourceTree = "<group>"; };
 		892C6B611E30CBC700B39B8C /* YANetworkingHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YANetworkingHandler.m; path = "YA files/source/handler/networking/YANetworkingHandler.m"; sourceTree = "<group>"; };
+		892C6B641E31FAC500B39B8C /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Extension.h"; path = "YA files/source/Category/UIView+Extension.h"; sourceTree = "<group>"; };
+		892C6B651E31FAC500B39B8C /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Extension.m"; path = "YA files/source/Category/UIView+Extension.m"; sourceTree = "<group>"; };
 		894279451E2C978C007AFA8E /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+YYModel.h"; path = "ThirdSupport/YYModel/NSObject+YYModel.h"; sourceTree = "<group>"; };
 		894279461E2C978C007AFA8E /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+YYModel.m"; path = "ThirdSupport/YYModel/NSObject+YYModel.m"; sourceTree = "<group>"; };
 		894279471E2C978C007AFA8E /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YYClassInfo.h; path = ThirdSupport/YYModel/YYClassInfo.h; sourceTree = "<group>"; };
@@ -123,6 +126,15 @@
 			name = networking;
 			sourceTree = "<group>";
 		};
+		892C6B631E31FA0200B39B8C /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				892C6B641E31FAC500B39B8C /* UIView+Extension.h */,
+				892C6B651E31FAC500B39B8C /* UIView+Extension.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		894279421E2C975D007AFA8E /* YYModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +215,7 @@
 				89B126C91E24EB5500A3B326 /* YASettingsViewController.m */,
 				892C6B571E30B22300B39B8C /* Handler */,
 				8942794C1E2CCB4F007AFA8E /* Model */,
+				892C6B631E31FA0200B39B8C /* Category */,
 			);
 			name = source;
 			sourceTree = "<group>";
@@ -351,6 +364,7 @@
 				89B72BA01E2395F5007A8E85 /* UIImageView+AFNetworking.m in Sources */,
 				894A45C31E1B92780065BB30 /* main.m in Sources */,
 				89B72B9F1E2395F5007A8E85 /* UIButton+AFNetworking.m in Sources */,
+				892C6B661E31FAC500B39B8C /* UIView+Extension.m in Sources */,
 				892C6B621E30CBC700B39B8C /* YANetworkingHandler.m in Sources */,
 				8942794F1E2CCD7B007AFA8E /* YAAqicnDataModel.m in Sources */,
 				89B72B701E2386D4007A8E85 /* YAHomeViewController.m in Sources */,
