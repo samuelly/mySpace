@@ -22,6 +22,16 @@
     UIScrollView *_mainScrollView;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
+    
+    return self;
+}
+
 #pragma mark - **************************** Life Cycle ****************************
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,9 +61,9 @@
 #pragma mark - **************************** UI Layout ****************************
 - (void)setupUI
 {
-    _mainScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.width, 300)];
+    _mainScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     _mainScrollView.delegate = self;
-    [_mainScrollView setContentSize:CGSizeMake(self.view.width, 300 + 100)];
+    [_mainScrollView setContentSize:CGSizeMake(self.view.width, self.view.height + 20)];
     [_mainScrollView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
     _mainScrollView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:_mainScrollView];
