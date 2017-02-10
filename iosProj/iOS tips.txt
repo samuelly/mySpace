@@ -493,7 +493,7 @@ http://swiftweekly.cn/archive.html   一个swift开发者周刊
 ＊＊ http://www.swiftguide.cn/   国内最强，没有之一
 
 
-
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 game dev in swift
 ＊＊  http://www.sprite-kit.com/tutorials/      关注spriteKit的发展动态，需要翻墙
 https://www.udemy.com/rume-academy-introduction-to-spritekit-in-swift/      需翻墙
@@ -512,6 +512,11 @@ http://www.cocoachina.com/game/20150906/13340.html  独立游戏人：像素风�
 
 game dev resource:
 http://pixeljoint.com       像素相关
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+移动game dev
+
+http://bbs.indiegames.cn/article/988    美术指南
+https://www.zhihu.com/question/21114802  知乎资源帖
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 
 高质量博客：
@@ -615,7 +620,7 @@ http://www.cocoachina.com/industry/20130624/6463.html   iOS汇编教程：ARM(1)
 https://www.bignerdranch.com/blog/leveling-up/
 
 
-Core-Animation-Advanced-Techniques:
+Core-Animation-Advanced-Techniques:   强烈推荐
 http://www.cocoachina.com/ios/20150104/10814.html
 http://www.cocoachina.com/ios/20150104/10816.html
 
@@ -638,7 +643,11 @@ http://www.cocoachina.com/game/20160519/16341.html     一大波能提高编程�
 https://www.zhihu.com/question/37146954      GitHub 上有些什么好玩的项目？
 
 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+一些源码收集：
 
+类似擦玻璃效果
+https://github.com/yuchuanfeng/CFScratchViewDemo
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 7.24:
 // http://www.topcss.org/?cat=96
 http://www.zhihu.com/question/32063728#answer-17281564
