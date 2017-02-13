@@ -67,14 +67,23 @@
     [_mainScrollView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
     _mainScrollView.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:_mainScrollView];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(kMargin, kMargin, self.view.width - 2*kMargin, 20)];
+    title.backgroundColor = [UIColor whiteColor];
+    title.text = [NSString stringWithFormat:@"今日PM2.5指数："];
+    title.font = [UIFont systemFontOfSize:14];
+    [self.view addSubview:title];
+    
 }
 
 #pragma mark - **************************** Request Data ****************************
 - (void)requestData
 {
     NSString *url = [NSString stringWithFormat:@"https://api.waqi.info/feed/here/?token=%@",kUserToken];
+    NSString *url2 = [NSString stringWithFormat:@"https://api.waqi.info/feed/nanjing/?token=%@",kUserToken];
+
     
-    [[YANetworkingHandler sharedInstance] post:url parameters:nil onSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+    [[YANetworkingHandler sharedInstance] post:url2 parameters:nil onSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         if (responseObject) {
             aqicnModel *model = [aqicnModel yy_modelWithJSON:responseObject];
             NSLog(@"the url is %@",[model.data.iaqi.pm25 objectForKey:@"v"]);
