@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  VAMainViewController.h
 //  VisualAlgorithm
 //
 //  Created by zhuqi's mac on 17/3/28.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface VAMainViewController : UIViewController
 
 @end
-
