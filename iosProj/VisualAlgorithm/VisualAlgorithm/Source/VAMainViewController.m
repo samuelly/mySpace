@@ -7,6 +7,8 @@
 //
 
 #import "VAMainViewController.h"
+#import "VASortViewController.h"
+
 
 @interface VAMainViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -35,6 +37,7 @@
         _mainTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _mainTableView.delegate = self;
         _mainTableView.dataSource = self;
+        _mainTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         [self.view addSubview:_mainTableView];
     }
 }
@@ -51,6 +54,11 @@
     return 1;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 80.0f;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [_nameArray count];
@@ -60,8 +68,28 @@
 {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     cell.textLabel.text = [_nameArray objectAtIndex:indexPath.row];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row)
+    {
+        case 0:
+        {
+            VASortViewController *sortVC = [[VASortViewController alloc] init];
+            [self.navigationController pushViewController:sortVC animated:YES];
+        }
+            break;
+            
+        case 1:
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

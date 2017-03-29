@@ -14,6 +14,8 @@
 		041E3E261E8A480200ADB17E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041E3E241E8A480200ADB17E /* LaunchScreen.storyboard */; };
 		041E3E311E8A480300ADB17E /* VisualAlgorithmUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E3E301E8A480300ADB17E /* VisualAlgorithmUITests.m */; };
 		041E3E411E8A6C3100ADB17E /* VAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E3E401E8A6C3100ADB17E /* VAMainViewController.m */; };
+		041E3E4D1E8B979500ADB17E /* VASortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E3E4C1E8B979500ADB17E /* VASortViewController.m */; };
+		041E3E521E8B97C800ADB17E /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E3E511E8B97C800ADB17E /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		041E3E321E8A480300ADB17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		041E3E3F1E8A6C3100ADB17E /* VAMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VAMainViewController.h; path = Source/VAMainViewController.h; sourceTree = "<group>"; };
 		041E3E401E8A6C3100ADB17E /* VAMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VAMainViewController.m; path = Source/VAMainViewController.m; sourceTree = "<group>"; };
+		041E3E4B1E8B979500ADB17E /* VASortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VASortViewController.h; path = Source/Sort/VASortViewController.h; sourceTree = "<group>"; };
+		041E3E4C1E8B979500ADB17E /* VASortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VASortViewController.m; path = Source/Sort/VASortViewController.m; sourceTree = "<group>"; };
+		041E3E4E1E8B97A600ADB17E /* VA.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VA.pch; sourceTree = "<group>"; };
+		041E3E501E8B97C800ADB17E /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Extension.h"; path = "Source/Category/UIView+Extension.h"; sourceTree = "<group>"; };
+		041E3E511E8B97C800ADB17E /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Extension.m"; path = "Source/Category/UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +100,7 @@
 		041E3E161E8A480200ADB17E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				041E3E4E1E8B97A600ADB17E /* VA.pch */,
 				041E3E271E8A480200ADB17E /* Info.plist */,
 				041E3E171E8A480200ADB17E /* main.m */,
 			);
@@ -113,6 +121,7 @@
 			children = (
 				041E3E3C1E8A6B0300ADB17E /* Home */,
 				041E3E3E1E8A6B1600ADB17E /* Sort */,
+				041E3E4F1E8B97AE00ADB17E /* Category */,
 				041E3E191E8A480200ADB17E /* AppDelegate.h */,
 				041E3E1A1E8A480200ADB17E /* AppDelegate.m */,
 			);
@@ -131,8 +140,19 @@
 		041E3E3E1E8A6B1600ADB17E /* Sort */ = {
 			isa = PBXGroup;
 			children = (
+				041E3E4B1E8B979500ADB17E /* VASortViewController.h */,
+				041E3E4C1E8B979500ADB17E /* VASortViewController.m */,
 			);
 			name = Sort;
+			sourceTree = "<group>";
+		};
+		041E3E4F1E8B97AE00ADB17E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				041E3E501E8B97C800ADB17E /* UIView+Extension.h */,
+				041E3E511E8B97C800ADB17E /* UIView+Extension.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,9 +259,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041E3E521E8B97C800ADB17E /* UIView+Extension.m in Sources */,
 				041E3E411E8A6C3100ADB17E /* VAMainViewController.m in Sources */,
 				041E3E1B1E8A480200ADB17E /* AppDelegate.m in Sources */,
 				041E3E181E8A480200ADB17E /* main.m in Sources */,
+				041E3E4D1E8B979500ADB17E /* VASortViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +462,7 @@
 				041E3E371E8A480300ADB17E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		041E3E381E8A480300ADB17E /* Build configuration list for PBXNativeTarget "VisualAlgorithmUITests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +471,7 @@
 				041E3E3A1E8A480300ADB17E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
