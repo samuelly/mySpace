@@ -8,9 +8,13 @@
 
 #import "VASortViewController.h"
 
+static const int stripCout = 100;
+
 @interface VASortViewController ()
 
 @property (nonatomic, strong) UISegmentedControl *segmentControl;
+//@property (nonatomic, assign) NSInteger stripCount;
+@property (nonatomic, copy) NSMutableArray *stripArray;
 
 @end
 
@@ -18,9 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+
     [self setupUI];
+    [self resetSortView];
 }
 
 - (void)setupUI
@@ -28,23 +32,39 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Sort Algorithm";
     
-    [self.view addSubview:_segmentControl];
+    [self.segmentControl setFrame:CGRectMake(15, 64 + 15, self.view.width - 2*15, 30)];
+    
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(tag) userInfo:nil repeats:NO];
 }
-
-//- (void)setSegmentControl:(UISegmentedControl *)segmentControl
-//{
-//
-//}
 
 - (UISegmentedControl *)segmentControl
 {
     if (!_segmentControl) {
-//        _segmentControl = [[UISegmentedControl alloc] initWithFrame:CGRectMake(0, 15, self.view., <#CGFloat height#>)]
+        _segmentControl = [[UISegmentedControl alloc] initWithItems:@[@"冒泡",@"并归",@"快排"]];
+        _segmentControl.selectedSegmentIndex = 0;
+        [_segmentControl addTarget:self action:@selector(segmentValueChanged:) forControlEvents:UIControlEventValueChanged];
+        [self.view addSubview:_segmentControl];
     }
     
     return _segmentControl;
 }
 
+- (void)resetSortView
+{
+    
+}
+
+#pragma mark -- Touch Events
+
+- (void)segmentValueChanged:(UISegmentedControl *)segmentControl
+{
+    BOOL tep;
+}
+
+- (void)tag
+{
+    NSLog(@"11111111111");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
