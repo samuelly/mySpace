@@ -26,6 +26,7 @@
 
 #define kDefaultViewBackgroundColor     kRGB(241, 241, 241)
 
+#define kMargin  16
 
 
 #define kUserToken @"a38f44fd94b0d3a034074c813f550cb15e9f50ef"
