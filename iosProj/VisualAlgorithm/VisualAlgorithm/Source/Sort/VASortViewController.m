@@ -7,14 +7,17 @@
 //
 
 #import "VASortViewController.h"
+#import "NSArray+Sort.h"
 
-static const int stripCout = 100;
+static const int stripCount = 100;
+static const CGFloat kMargin = 15.0f;
+static const CGFloat stripGap = 1.0f;
 
 @interface VASortViewController ()
 
 @property (nonatomic, strong) UISegmentedControl *segmentControl;
 //@property (nonatomic, assign) NSInteger stripCount;
-@property (nonatomic, copy) NSMutableArray *stripArray;
+@property (nonatomic, copy) NSMutableArray <UIView *> *stripArray;
 
 @end
 
@@ -32,7 +35,7 @@ static const int stripCout = 100;
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Sort Algorithm";
     
-    [self.segmentControl setFrame:CGRectMake(15, 64 + 15, self.view.width - 2*15, 30)];
+    [self.segmentControl setFrame:CGRectMake(kMargin, 64 + kMargin, self.view.width - 2*kMargin, 30)];
     
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(tag) userInfo:nil repeats:NO];
 }
@@ -51,14 +54,48 @@ static const int stripCout = 100;
 
 - (void)resetSortView
 {
+    if (!_stripArray) {
+        _stripArray = [NSMutableArray arrayWithCapacity:stripCount];
+        for (int i = 0; i < stripCount; i++ ) {
+            UIView *stripView = [[UIView alloc] init];
+            [_stripArray addObject:stripView];
+        }
+    }
     
+    CGFloat width = (self.view.width - 2*kMargin - (stripCount - 1)*stripGap) / stripCount;
+    
+     [_stripArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+         UIView *stripView = obj;
+         stripView.backgroundColor = [UIColor redColor];
+         CGFloat height = 100 + arc4random_uniform(250);
+         [stripView setFrame:CGRectMake(kMargin + idx*(width + stripGap), self.view.height - 100 - height, width, height)];
+         [self.view addSubview:stripView];
+         
+     }];
 }
 
 #pragma mark -- Touch Events
 
 - (void)segmentValueChanged:(UISegmentedControl *)segmentControl
 {
-    BOOL tep;
+//    switch (segmentControl.selectedSegmentIndex) {
+//        case 0:
+//            
+//            break;
+//            
+//        default:
+//            break;
+//    }
+    
+//    [self resetSortView];
+//    [_stripArray swap];
+    CGFloat originX1 = _stripArray[0].origin.x;
+    CGFloat originX2 = _stripArray[50].origin.x;
+    [UIView animateWithDuration:0.3 animations:^{
+        [_stripArray[0] setOrigin:CGPointMake(originX2, _stripArray[0].origin.y)];
+        [_stripArray[50] setOrigin:CGPointMake(originX1, _stripArray[50].origin.y)];
+    }];
+    
 }
 
 - (void)tag
@@ -70,6 +107,4 @@ static const int stripCout = 100;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
 @end

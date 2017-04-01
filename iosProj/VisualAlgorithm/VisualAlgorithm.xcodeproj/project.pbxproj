@@ -16,6 +16,7 @@
 		041E3E411E8A6C3100ADB17E /* VAMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E3E401E8A6C3100ADB17E /* VAMainViewController.m */; };
 		041E3E4D1E8B979500ADB17E /* VASortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E3E4C1E8B979500ADB17E /* VASortViewController.m */; };
 		041E3E521E8B97C800ADB17E /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 041E3E511E8B97C800ADB17E /* UIView+Extension.m */; };
+		895E928B1E8F9976003F6C10 /* NSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 895E928A1E8F9976003F6C10 /* NSArray+Sort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		041E3E4E1E8B97A600ADB17E /* VA.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VA.pch; sourceTree = "<group>"; };
 		041E3E501E8B97C800ADB17E /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Extension.h"; path = "Source/Category/UIView+Extension.h"; sourceTree = "<group>"; };
 		041E3E511E8B97C800ADB17E /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Extension.m"; path = "Source/Category/UIView+Extension.m"; sourceTree = "<group>"; };
+		895E92891E8F9976003F6C10 /* NSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Sort.h"; path = "Source/Category/NSArray+Sort.h"; sourceTree = "<group>"; };
+		895E928A1E8F9976003F6C10 /* NSArray+Sort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Sort.m"; path = "Source/Category/NSArray+Sort.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 			children = (
 				041E3E501E8B97C800ADB17E /* UIView+Extension.h */,
 				041E3E511E8B97C800ADB17E /* UIView+Extension.m */,
+				895E92891E8F9976003F6C10 /* NSArray+Sort.h */,
+				895E928A1E8F9976003F6C10 /* NSArray+Sort.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				895E928B1E8F9976003F6C10 /* NSArray+Sort.m in Sources */,
 				041E3E521E8B97C800ADB17E /* UIView+Extension.m in Sources */,
 				041E3E411E8A6C3100ADB17E /* VAMainViewController.m in Sources */,
 				041E3E1B1E8A480200ADB17E /* AppDelegate.m in Sources */,
@@ -403,6 +409,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = VisualAlgorithm/VA.pch;
 				INFOPLIST_FILE = VisualAlgorithm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LemonTree.VisualAlgorithm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -417,6 +424,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = VisualAlgorithm/VA.pch;
 				INFOPLIST_FILE = VisualAlgorithm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LemonTree.VisualAlgorithm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
