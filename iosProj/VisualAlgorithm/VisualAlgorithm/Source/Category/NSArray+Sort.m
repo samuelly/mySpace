@@ -10,9 +10,15 @@
 
 @implementation NSArray (Sort)
 
-- (void)startBubbleSort
+- (void)startBubbleSort:(NSArray<UIView *> *)stripArray callBack:(swapCallback)swapCallback
 {
-    
+    for (NSUInteger i = 1; i < stripArray.count; i++ ) {
+        for (NSUInteger j = stripArray.count - 1; j >= i; j-- ) {
+            if (stripArray[j].height < stripArray[j - 1].height) {
+                swapCallback(j,j-1);
+            }
+        }
+    }
 }
 
 
@@ -29,6 +35,7 @@
         
         [view1 setOrigin:CGPointMake(position2, view1.origin.y)];
         [view2 setOrigin:CGPointMake(position1, view2.origin.y)];
+        
     }];
     
 

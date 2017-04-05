@@ -16,8 +16,8 @@ static const CGFloat stripGap = 1.0f;
 @interface VASortViewController ()
 
 @property (nonatomic, strong) UISegmentedControl *segmentControl;
-//@property (nonatomic, assign) NSInteger stripCount;
-@property (nonatomic, copy) NSMutableArray <UIView *> *stripArray;
+@property (nonatomic, assign) NSInteger selectedSegmentIndex;
+@property (nonatomic, copy) NSMutableArray<UIView *> *stripArray;
 
 @end
 
@@ -34,6 +34,12 @@ static const CGFloat stripGap = 1.0f;
 {
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"Sort Algorithm";
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithTitle:@"Sort"
+                                                                    style:UIBarButtonItemStylePlain
+                                                                   target:self
+                                                                   action:@selector(sortBtnPress:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
     
     [self.segmentControl setFrame:CGRectMake(kMargin, 64 + kMargin, self.view.width - 2*kMargin, 30)];
     
@@ -78,24 +84,50 @@ static const CGFloat stripGap = 1.0f;
 
 - (void)segmentValueChanged:(UISegmentedControl *)segmentControl
 {
-//    switch (segmentControl.selectedSegmentIndex) {
-//        case 0:
-//            
-//            break;
-//            
-//        default:
-//            break;
-//    }
+    switch (segmentControl.selectedSegmentIndex) {
+        case 0:
+            
+            break;
+            
+        default:
+            break;
+    }
     
-//    [self resetSortView];
-//    [_stripArray swap];
-    CGFloat originX1 = _stripArray[0].origin.x;
-    CGFloat originX2 = _stripArray[50].origin.x;
+    [self resetSortView];
+    _selectedSegmentIndex = segmentControl.selectedSegmentIndex;
+    
+}
+
+- (void)sortBtnPress:(UIBarButtonItem *)sender
+{
+    switch (_selectedSegmentIndex) {
+        case 0:
+        {
+            [_stripArray startBubbleSort:_stripArray callBack:^(NSUInteger stripArrayIdx1, NSUInteger stripArrayIdx2) {
+                [self swapWithIndex1:stripArrayIdx1 index2:stripArrayIdx2];
+            }];
+        }
+            break;
+        
+        case 1:
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)swapWithIndex1:(NSUInteger)idx1 index2:(NSUInteger)idx2
+{
+    UIView *viewWithIndex1 = _stripArray[idx1];
+    UIView *viewWithIndex2 = _stripArray[idx2];
+    
     [UIView animateWithDuration:0.3 animations:^{
-        [_stripArray[0] setOrigin:CGPointMake(originX2, _stripArray[0].origin.y)];
-        [_stripArray[50] setOrigin:CGPointMake(originX1, _stripArray[50].origin.y)];
+        [viewWithIndex1 setOrigin:CGPointMake(viewWithIndex2.origin.x, viewWithIndex1.origin.y)];
+        [viewWithIndex2 setOrigin:CGPointMake(viewWithIndex1.origin.x, viewWithIndex2.origin.y)];
     }];
     
+    UIView animateWithDuration:<#(NSTimeInterval)#> animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>
 }
 
 - (void)tag
