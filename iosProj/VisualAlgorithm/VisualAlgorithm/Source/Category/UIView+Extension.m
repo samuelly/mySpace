@@ -162,4 +162,73 @@
     return CGPointMake(x, y);
 }
 
+
+- (UIView*)descendantOrSelfWithClass:(Class)cls {
+    if ([self isKindOfClass:cls])
+        return self;
+    
+    for (UIView* child in self.subviews) {
+        UIView* it = [child descendantOrSelfWithClass:cls];
+        if (it)
+            return it;
+    }
+    
+    return nil;
+}
+
+- (UIView*)ancestorOrSelfWithClass:(Class)cls {
+    if ([self isKindOfClass:cls]) {
+        return self;
+    } else if (self.superview) {
+        return [self.superview ancestorOrSelfWithClass:cls];
+    } else {
+        return nil;
+    }
+}
+
+- (void)removeAllSubviews {
+    while (self.subviews.count) {
+        UIView* child = self.subviews.lastObject;
+        [child removeFromSuperview];
+    }
+}
+
+- (UIViewController*)viewController {
+    for (UIView* next = [self superview]; next; next = next.superview) {
+        UIResponder* nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]]) {
+            return (UIViewController*)nextResponder;
+        }
+    }
+    return nil;
+}
+
+- (id)findFirstResponder
+{
+    if (self.isFirstResponder) {
+        return self;
+    }
+    for (UIView *subView in self.subviews) {
+        id responder = [subView findFirstResponder];
+        if (responder) return responder;
+    }
+    return nil;
+}
+
+- (void)drawLineWithX:(CGFloat)x Y:(CGFloat)y width:(CGFloat)width height:(CGFloat)height color:(UIColor *)color {
+    UIView *spliteLine = [[UIView  alloc] initWithFrame:CGRectMake(x, y, width, height)];
+    [spliteLine setBackgroundColor:color];
+    [self addSubview:spliteLine];
+}
+
+- (void)addRoundedCorners:(UIRectCorner)corners
+                withRadii:(CGSize)radii {
+    
+    UIBezierPath* rounded = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:radii];
+    CAShapeLayer* shape = [[CAShapeLayer alloc] init];
+    [shape setPath:rounded.CGPath];
+    
+    self.layer.mask = shape;
+}
+
 @end

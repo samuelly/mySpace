@@ -18,6 +18,8 @@ static const CGFloat stripGap = 1.0f;
 @property (nonatomic, strong) UISegmentedControl *segmentControl;
 @property (nonatomic, assign) NSInteger selectedSegmentIndex;
 @property (nonatomic, copy) NSMutableArray<UIView *> *stripArray;
+@property (nonatomic, strong) dispatch_semaphore_t semaPhore;
+@property (nonatomic, strong) NSTimer *timer;
 
 @end
 
@@ -44,6 +46,12 @@ static const CGFloat stripGap = 1.0f;
     [self.segmentControl setFrame:CGRectMake(kMargin, 64 + kMargin, self.view.width - 2*kMargin, 30)];
     
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:4 target:self selector:@selector(tag) userInfo:nil repeats:NO];
+    
+    self.semaPhore = dispatch_semaphore_create(0);
+    //dispatch_semaphore_signal(_semaPhore);
+    //NSLog(@"111");
+    //dispatch_semaphore_wait(_semaPhore, DISPATCH_TIME_FOREVER);
+    //sleep(1000);
 }
 
 - (UISegmentedControl *)segmentControl
@@ -100,6 +108,8 @@ static const CGFloat stripGap = 1.0f;
 
 - (void)sortBtnPress:(UIBarButtonItem *)sender
 {
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.002 target:self selector:@selector(launchTimerAction) userInfo:nil repeats:YES];
+    sleep(5);
     switch (_selectedSegmentIndex) {
         case 0:
         {
@@ -119,15 +129,23 @@ static const CGFloat stripGap = 1.0f;
 
 - (void)swapWithIndex1:(NSUInteger)idx1 index2:(NSUInteger)idx2
 {
-    UIView *viewWithIndex1 = _stripArray[idx1];
-    UIView *viewWithIndex2 = _stripArray[idx2];
-    
-    [UIView animateWithDuration:0.3 animations:^{
+    dispatch_semaphore_wait(_semaPhore, DISPATCH_TIME_FOREVER);
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIView *viewWithIndex1 = _stripArray[idx1];
+        UIView *viewWithIndex2 = _stripArray[idx2];
+        
         [viewWithIndex1 setOrigin:CGPointMake(viewWithIndex2.origin.x, viewWithIndex1.origin.y)];
         [viewWithIndex2 setOrigin:CGPointMake(viewWithIndex1.origin.x, viewWithIndex2.origin.y)];
-    }];
     
-    UIView animateWithDuration:<#(NSTimeInterval)#> animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>
+    });
+
+    
+}
+
+- (void)launchTimerAction
+{
+    dispatch_semaphore_signal(_semaPhore);
 }
 
 - (void)tag
