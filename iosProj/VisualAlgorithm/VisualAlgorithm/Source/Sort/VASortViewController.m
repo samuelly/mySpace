@@ -81,7 +81,7 @@ static const CGFloat stripGap = 1.0f;
      [_stripArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
          UIView *stripView = obj;
          stripView.backgroundColor = [UIColor redColor];
-         CGFloat height = 100 + arc4random_uniform(250);
+         CGFloat height = 50 + arc4random_uniform(300);
          [stripView setFrame:CGRectMake(kMargin + idx*(width + stripGap), self.view.height - 100 - height, width, height)];
          [self.view addSubview:stripView];
          
@@ -109,22 +109,30 @@ static const CGFloat stripGap = 1.0f;
 - (void)sortBtnPress:(UIBarButtonItem *)sender
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.002 target:self selector:@selector(launchTimerAction) userInfo:nil repeats:YES];
-    sleep(5);
-    switch (_selectedSegmentIndex) {
-        case 0:
-        {
-            [_stripArray startBubbleSort:_stripArray callBack:^(NSUInteger stripArrayIdx1, NSUInteger stripArrayIdx2) {
-                [self swapWithIndex1:stripArrayIdx1 index2:stripArrayIdx2];
-            }];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        switch (_selectedSegmentIndex) {
+            case 0:
+            {
+                [_stripArray startBubbleSort:_stripArray callBack:^(NSUInteger stripArrayIdx1, NSUInteger stripArrayIdx2) {
+                    [self swapWithIndex1:stripArrayIdx1 index2:stripArrayIdx2];
+                }];
+            }
+                break;
+                
+            case 1:
+                break;
+                
+            default:
+                break;
         }
-            break;
         
-        case 1:
-            break;
-            
-        default:
-            break;
-    }
+        if (self.timer) {
+            [self.timer invalidate]; self.timer = nil;
+        }
+        
+    });
+
 }
 
 - (void)swapWithIndex1:(NSUInteger)idx1 index2:(NSUInteger)idx2
@@ -132,16 +140,17 @@ static const CGFloat stripGap = 1.0f;
     dispatch_semaphore_wait(_semaPhore, DISPATCH_TIME_FOREVER);
 
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIView *viewWithIndex1 = _stripArray[idx1];
-        UIView *viewWithIndex2 = _stripArray[idx2];
         
-        [viewWithIndex1 setOrigin:CGPointMake(viewWithIndex2.origin.x, viewWithIndex1.origin.y)];
-        [viewWithIndex2 setOrigin:CGPointMake(viewWithIndex1.origin.x, viewWithIndex2.origin.y)];
+        CGFloat originX1 = _stripArray[idx1].origin.x;
+        CGFloat originX2 = _stripArray[idx2].origin.x;
+//        [UIView animateWithDuration:0.3 animations:^{
+            [_stripArray[idx1] setOrigin:CGPointMake(originX2, _stripArray[idx1].origin.y)];
+            [_stripArray[idx2] setOrigin:CGPointMake(originX1, _stripArray[idx2].origin.y)];
+//        }];
     
     });
-
-    
 }
+
 
 - (void)launchTimerAction
 {

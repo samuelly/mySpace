@@ -12,7 +12,7 @@ typedef void (^swapCallback)(NSUInteger stripArrayIdx1,NSUInteger stripArrayIdx2
 
 @interface NSArray (Sort)
 
-- (void)startBubbleSort:(NSArray<UIView *> *)stripArray callBack:(swapCallback)swapCallback;
+- (void)startBubbleSort:(NSMutableArray<UIView *> *)stripArray callBack:(swapCallback)swapCallback;
 - (void)swap;
 
 @end
