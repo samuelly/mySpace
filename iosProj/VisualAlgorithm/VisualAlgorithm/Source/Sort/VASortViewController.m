@@ -108,7 +108,7 @@ static const CGFloat stripGap = 1.0f;
 
 - (void)sortBtnPress:(UIBarButtonItem *)sender
 {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.002 target:self selector:@selector(launchTimerAction) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.003 target:self selector:@selector(launchTimerAction) userInfo:nil repeats:YES];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         switch (_selectedSegmentIndex) {

@@ -14,7 +14,7 @@
 {
     for (NSUInteger i = 1; i < stripArray.count; i++ ) {
         for (NSUInteger j = stripArray.count - 1; j >= i; j-- ) {
-            if (stripArray[j].height < stripArray[j - 1].height) {
+            if (stripArray[j].height <= stripArray[j - 1].height) {
                 swapCallback(j,j-1);
                 UIView *temp = stripArray[j];
                 stripArray[j] = stripArray[j-1];
