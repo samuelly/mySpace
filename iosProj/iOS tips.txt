@@ -717,6 +717,7 @@ ios 9之后网络请求必须支持https，在info.plist文件添加AppTransport
 xcode调试相关：
 po [[self view] recursiveDescription]; 
 
+http://www.cnblogs.com/junhuawang/p/5759224.html  webview
 
 问题：
 
