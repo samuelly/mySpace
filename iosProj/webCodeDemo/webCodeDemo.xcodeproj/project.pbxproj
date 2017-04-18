@@ -13,6 +13,8 @@
 		89BE7F301EA4CB7A0073F5C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BE7F2E1EA4CB7A0073F5C2 /* Main.storyboard */; };
 		89BE7F321EA4CB7A0073F5C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89BE7F311EA4CB7A0073F5C2 /* Assets.xcassets */; };
 		89BE7F351EA4CB7A0073F5C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89BE7F331EA4CB7A0073F5C2 /* LaunchScreen.storyboard */; };
+		89BE7F531EA5FE590073F5C2 /* webCodeMainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BE7F521EA5FE590073F5C2 /* webCodeMainVC.m */; };
+		89BE7F561EA600BD0073F5C2 /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89BE7F551EA600BD0073F5C2 /* webViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		89BE7F311EA4CB7A0073F5C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		89BE7F341EA4CB7A0073F5C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89BE7F361EA4CB7C0073F5C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89BE7F511EA5FE590073F5C2 /* webCodeMainVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webCodeMainVC.h; sourceTree = "<group>"; };
+		89BE7F521EA5FE590073F5C2 /* webCodeMainVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webCodeMainVC.m; sourceTree = "<group>"; };
+		89BE7F541EA600BD0073F5C2 /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
+		89BE7F551EA600BD0073F5C2 /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,10 @@
 				89BE7F331EA4CB7A0073F5C2 /* LaunchScreen.storyboard */,
 				89BE7F361EA4CB7C0073F5C2 /* Info.plist */,
 				89BE7F251EA4CB740073F5C2 /* Supporting Files */,
+				89BE7F511EA5FE590073F5C2 /* webCodeMainVC.h */,
+				89BE7F521EA5FE590073F5C2 /* webCodeMainVC.m */,
+				89BE7F541EA600BD0073F5C2 /* webViewController.h */,
+				89BE7F551EA600BD0073F5C2 /* webViewController.m */,
 			);
 			path = webCodeDemo;
 			sourceTree = "<group>";
@@ -152,6 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				89BE7F2D1EA4CB780073F5C2 /* ViewController.m in Sources */,
+				89BE7F531EA5FE590073F5C2 /* webCodeMainVC.m in Sources */,
+				89BE7F561EA600BD0073F5C2 /* webViewController.m in Sources */,
 				89BE7F2A1EA4CB760073F5C2 /* AppDelegate.m in Sources */,
 				89BE7F271EA4CB740073F5C2 /* main.m in Sources */,
 			);
@@ -275,6 +287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SFWLXFZC2V;
 				INFOPLIST_FILE = webCodeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhuqi.webCodeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +300,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SFWLXFZC2V;
 				INFOPLIST_FILE = webCodeDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhuqi.webCodeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "webCodeMainVC.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    webCodeMainVC *mainVC = [[webCodeMainVC alloc] init];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    self.window.rootViewController = self.navController;
+    
     return YES;
 }
 
