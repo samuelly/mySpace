@@ -25,6 +25,7 @@ static const CGFloat BTN_HEIGHT = 44;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self setupUI];
 }
 
@@ -37,6 +38,8 @@ static const CGFloat BTN_HEIGHT = 44;
     [_startBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     _startBtn.layer.borderWidth = 1;
     [_startBtn addTarget:self action:@selector(goWebCode) forControlEvents:UIControlEventTouchUpInside];
+    _startBtn.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
+    _startBtn.center = self.view.center;
     [self.view addSubview:_startBtn];
 }
 
