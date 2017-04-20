@@ -1024,4 +1024,33 @@ class_addMethod([MYclass class], @selector(sayHello:), myIMP, "v@:@");
 希望这篇文章能让你更深入地了解Objective-C，在开发app时也能开阔思路，考虑更多的可能性。
 
 
---EOF--
+--EOF
+
+
+
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+4月20日整理
+
+http://www.cocoachina.com/ios/20170317/18911.html  
+http://www.cnblogs.com/ludashi/p/3868687.html
+http://www.cocoachina.com/ios/20170328/18962.html  weak 原理
+http://www.cocoachina.com/ios/20161104/17955.html
+http://www.cocoachina.com/ios/20170322/18938.html  why无法同时生成setter getter
+http://blog.sunnyxx.com/2014/03/05/objc_category_secret/  
+http://www.cocoachina.com/ios/20161129/18213.html  runtime
+http://www.cocoachina.com/design/20170316/18896.html  导航栏平滑1
+http://www.cocoachina.com/ios/20170331/18944.html   导航栏平滑 进阶
+
+http://blog.csdn.net/zzzzzdddddxxxxx/article/details/53084903  排序算法实现
+https://casatwy.com/iosying-yong-jia-gou-tan-wang-luo-ceng-she-ji-fang-an.html 架构
+http://www.cocoachina.com/ios/20170407/19016.html notification
+http://blog.csdn.net/Cloudox_/article/details/64132566 遍历打印子view
+http://liuyanwei.jumppo.com/2016/02/04/ios-networking-3.html
+
+stock 量化高频
+https://www.zhihu.com/question/30781291
+https://www.zhihu.com/question/23667442
+https://www.zhihu.com/question/24577564/answer/28678695
+
+
