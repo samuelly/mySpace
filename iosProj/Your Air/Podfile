@@ -1,0 +1,9 @@
+
+platform :ios, '8.0'
+
+target 'Your Air' do
+  pod 'AFNetworking', '~> 3.0.0'
+  pod 'HandyFrame', '~> 1.1.3'
+  pod 'YYModel', '~> 1.0.4'
+end
+

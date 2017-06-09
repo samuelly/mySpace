@@ -83,7 +83,7 @@
     NSString *url2 = [NSString stringWithFormat:@"https://api.waqi.info/feed/nanjing/?token=%@",kUserToken];
 
     
-    [[YANetworkingHandler sharedInstance] post:url2 parameters:nil onSuccess:^(NSURLSessionDataTask *task, id responseObject) {
+    [[YANetworkingHandler sharedInstance] post:url parameters:nil onSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         if (responseObject) {
             aqicnModel *model = [aqicnModel yy_modelWithJSON:responseObject];
             NSLog(@"the url is %@",[model.data.iaqi.pm25 objectForKey:@"v"]);
